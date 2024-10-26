@@ -852,7 +852,7 @@ def main():
     finally:
         print("\n¡Gracias por usar el Generador de Identidades Simuladas!")
         print("Versión: 1.0")
-        print("Desarrollado por: @686f6c61")
+        print("Desarrollado por: @hex686f6c61")
         print("GitHub: https://github.com/686f6c61")
         print("Hasta pronto.")
 
