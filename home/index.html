@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake ID, profiles & photo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<div class="container py-5">
+    <!-- Eliminar el h1 y section inicial -->
+    
+    <!-- Contenedor principal -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-lg-3">
+                <div class="sidebar sticky-top" style="top: 80px;">
+                    <div class="list-group">
+                        <a href="#inicio" class="list-group-item list-group-item-action">Inicio</a>
+                        
+                        <div class="list-group-item bg-light fw-bold">Datos Básicos</div>
+                        <a href="#datos-personales" class="list-group-item list-group-item-action ps-4">Datos Personales</a>
+                        <a href="#datos-biometricos" class="list-group-item list-group-item-action ps-4">Datos Biométricos</a>
+                        <a href="#otros-datos" class="list-group-item list-group-item-action ps-4">Otros Datos</a>
+                        
+                        <div class="list-group-item bg-light fw-bold">Historia y Formación</div>
+                        <a href="#historia-familiar" class="list-group-item list-group-item-action ps-4">Historia Familiar</a>
+                        <a href="#educacion" class="list-group-item list-group-item-action ps-4">Educación</a>
+                        <a href="#experiencia" class="list-group-item list-group-item-action ps-4">Experiencia</a>
+                        
+                        <div class="list-group-item bg-light fw-bold">Perfiles</div>
+                        <a href="#perfil-psicologico" class="list-group-item list-group-item-action ps-4">Perfil Psicológico</a>
+                        <a href="#perfil-pareja" class="list-group-item list-group-item-action ps-4">Perfil de Pareja</a>
+                        
+                        <a href="#foto-perfil" class="list-group-item list-group-item-action">Foto del Perfil</a>
+                        <a href="#seguridad" class="list-group-item list-group-item-action">Seguridad y Limitaciones</a>
+                    </div>
+                    
+                    <!-- Enlace al repositorio -->
+                    <div class="mt-3 text-center">
+                        <a href="https://github.com/686f6c61/fake-id-profile-photo" 
+                           class="btn btn-dark" 
+                           target="_blank">
+                            <i class="fab fa-github me-2"></i>
+                            Ver en GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contenido principal -->
+            <div class="col-lg-9">
+                <!-- Sección de inicio con el título principal -->
+                <section id="inicio" class="mb-5">
+                    <h1 class="display-4 text-center mb-4">Fake ID, profiles & photo</h1>
+                    <p class="lead text-center mb-5">Sistema avanzado de generación de identidades y perfiles completos</p>
+                </section>
+
+                <!-- Mover aquí la sección de datos personales -->
+                <section id="datos-personales" class="mb-5">
+                    <h2 class="display-6 mb-4">📋 Datos Personales</h2>
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-primary">
+                            <h3 class="h4 mb-0 text-white">👤 Información Personal Básica</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">El sistema genera los siguientes datos personales:</p>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="me-2">👥</span>
+                                        <span>Nombre completo</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="me-2">⚧️</span>
+                                        <span>Sexo (Hombre/Mujer)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="me-2">📅</span>
+                                        <span>Edad (entre 18 y 65 años)</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="me-2">🪪</span>
+                                        <span>DNI (formato válido)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="me-2">📍</span>
+                                        <span>Dirección completa en España</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="alert alert-info mt-4">
+                                <i class="fas fa-info-circle"></i> Todos los datos generados son ficticios pero coherentes entre sí.
+                            </div>
+                            <!-- Añadir el JSON generado -->
+                            <div class="mt-4">
+                                <h4>🔍 JSON Generado</h4>
+                                <pre class="bg-light p-3 rounded"><code>{
+    "datos_personales": {
+        "nombre_completo": "Antonio García Martínez",
+        "sexo": "Hombre",
+        "edad": 34,
+        "dni": "12345678A",
+        "direccion": {
+            "calle": "Calle Mayor 123",
+            "codigo_postal": "28001",
+            "ciudad": "Madrid",
+            "provincia": "Madrid"
+        }
+    }
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="datos-biometricos" class="mb-5">
+                    <h2 class="display-6 mb-4">🧬 Datos Biométricos</h2>
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-primary">
+                            <h3 class="h4 mb-0 text-white">📊 Características Físicas</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Se generan las siguientes características físicas:</p>
+                            
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <div class="card h-100 border-light">
+                                        <div class="card-header bg-light text-dark">
+                                            <h4 class="h5 mb-0"> Medidas</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">📏</span>
+                                                <span>Altura</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">⚖️</span>
+                                                <span>Peso</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="card h-100 border-light">
+                                        <div class="card-header bg-light text-dark">
+                                            <h4 class="h5 mb-0">👤 Rasgos</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">👁️</span>
+                                                <span>Color de ojos</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">💇</span>
+                                                <span>Color de pelo</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="card h-100 border-light">
+                                        <div class="card-header bg-light text-dark">
+                                            <h4 class="h5 mb-0">💪 Constitución</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">💪</span>
+                                                <span>Tipo constitución</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">🔍</span>
+                                                <span>Marcas distintivas</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <h4>🔍 JSON Generado</h4>
+                                <pre class="bg-light p-3 rounded"><code>{
+    "datos_biometricos": {
+        "altura": "175cm",
+        "peso": "70kg",
+        "color_ojos": "marrones",
+        "color_pelo": "castaño",
+        "constitucion": "media",
+        "marcas_visibles": "ninguna"
+    }
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="historia-familiar" class="mb-5">
+                    <h2 class="display-6 mb-4">👨‍👩‍👧‍👦 Historia Familiar</h2>
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-primary">
+                            <h3 class="h4 mb-0 text-white">🌳 Antecedentes Familiares</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Se genera una historia familiar completa que incluye:</p>
+                            
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-light">
+                                        <div class="card-header bg-light text-dark">
+                                            <h4 class="h5 mb-0">👥 Información de Padres</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">📝</span>
+                                                <span>Nombres completos</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">🎂</span>
+                                                <span>Edades</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">💼</span>
+                                                <span>Profesiones</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-light">
+                                        <div class="card-header bg-light text-dark">
+                                            <h4 class="h5 mb-0">👴👵 Información de Abuelos</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">👨‍👩‍👧‍👦</span>
+                                                <span>Datos de abuelos paternos</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">👨‍👩‍👧‍👦</span>
+                                                <span>Datos de abuelos maternos</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-light">
+                                        <div class="card-header bg-light text-dark">
+                                            <h4 class="h5 mb-0">📅 Eventos Importantes</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">📆</span>
+                                                <span>15 eventos familiares significativos</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">🎯</span>
+                                                <span>Fechas y acontecimientos relevantes</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-light">
+                                        <div class="card-header bg-light text-dark">
+                                            <h4 class="h5 mb-0">🤝 Círculo Social</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">👥</span>
+                                                <span>6 amigos cercanos detallados</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">💑</span>
+                                                <span>Situación sentimental</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h4>🔍 JSON Generado</h4>
+                        <pre class="bg-light p-3 rounded"><code>{
+    "padres": {
+        "padre": {
+            "nombre": "José García López",
+            "edad": 65,
+            "profesion": "Profesor jubilado"
+        },
+        "madre": {
+            "nombre": "María Martínez Ruiz",
+            "edad": 62,
+            "profesion": "Enfermera"
+        }
+    },
+    "abuelos": {
+        "paternos": {
+            "abuelo": "Manuel García Sánchez",
+            "abuela": "Ana López Fernández"
+        },
+        "maternos": {
+            "abuelo": "Pedro Martínez García",
+            "abuela": "Carmen Ruiz Torres"
+        }
+    },
+    "eventos_importantes": [
+        "Nacimiento en Hospital La Paz - 1989",
+        "Primera comunión en Iglesia San José - 1997",
+        "Graduación universidad - 2012"
+    ],
+    "circulo_social": {
+        "amigos_cercanos": [
+            "Miguel Rodríguez - Amigo desde el colegio",
+            "Laura Sánchez - Compañera universidad",
+            "Carlos Pérez - Amigo del trabajo"
+        ],
+        "situacion_sentimental": "En pareja desde 2019"
+    }
+}</code></pre>
+                    </div>
+                </section>
+
+                <section id="educacion" class="mb-5">
+                    <h2 class="display-6 mb-4">🎓 Formación Académica</h2>
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-primary text-white">
+                            <h3 class="h4 mb-0">📚 Historial Educativo</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Se genera un historial educativo completo y coherente:</p>
+                            
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <div class="card h-100 border-light">
+                                        <div class="card-header bg-light">
+                                            <h4 class="h5 mb-0">🏫 Educación Primaria</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <span class="me-2">🏢</span>
+                                                <span>Centro educativo</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-2">
+                                                <span class="me-2">📅</span>
+                                                <span>Periodo de estudios</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-2">
+                                                <span class="me-2">📍</span>
+                                                <span>Ubicación del centro</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="card h-100 border-light">
+                                        <div class="card-header bg-light">
+                                            <h4 class="h5 mb-0">🎒 Educación Secundaria</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <span class="me-2">🏢</span>
+                                                <span>Instituto</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-2">
+                                                <span class="me-2">📅</span>
+                                                <span>Periodo cursado</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-2">
+                                                <span class="me-2">📋</span>
+                                                <span>Especialidad elegida</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="card h-100 border-light">
+                                        <div class="card-header bg-light">
+                                            <h4 class="h5 mb-0">🎓 Educación Superior</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <span class="me-2">🏛️</span>
+                                                <span>Universidad</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-2">
+                                                <span class="me-2">📚</span>
+                                                <span>Carrera estudiada</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-2">
+                                                <span class="me-2">📊</span>
+                                                <span>Rendimiento académico</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="card border-light">
+                                        <div class="card-header bg-light">
+                                            <h4 class="h5 mb-0">📜 Formación Complementaria</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row g-3">
+                                                <div class="col-md-6">
+                                                    <div class="d-flex align-items-center mb-2">
+                                                        <span class="me-2">🎯</span>
+                                                        <span>Cursos especializados</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="d-flex align-items-center mb-2">
+                                                        <span class="me-2">📜</span>
+                                                        <span>Certificaciones profesionales</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h4>🔍 JSON Generado</h4>
+                        <pre class="bg-light p-3 rounded"><code>{
+    "educacion_primaria": {
+        "centro": "Colegio San José",
+        "periodo": "1995-2001",
+        "ubicacion": "Madrid"
+    },
+    "educacion_secundaria": {
+        "centro": "IES Manuel de Falla",
+        "periodo": "2001-2007",
+        "especialidad": "Ciencias"
+    },
+    "educacion_superior": {
+        "universidad": "Universidad Complutense de Madrid",
+        "carrera": "Ingeniería Informática",
+        "rendimiento": "Notable"
+    },
+    "formacion_complementaria": {
+        "cursos": [
+            "Desarrollo Web Full Stack",
+            "Machine Learning Básico",
+            "Gestión de Proyectos Ágiles"
+        ],
+        "certificaciones": [
+            "SCRUM Master",
+            "AWS Certified Developer"
+        ]
+    }
+}</code></pre>
+                    </div>
+                </section>
+
+                <section id="experiencia" class="mb-5">
+                    <h2 class="display-6 mb-4">💼 Experiencia Profesional</h2>
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-primary text-white">
+                            <h3 class="h4 mb-0">👔 Trayectoria Laboral</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Se genera una experiencia laboral detallada y coherente:</p>
+                            
+                            <div class="row g-4">
+                                <div class="col-md-12">
+                                    <div class="card border-light">
+                                        <div class="card-header bg-light">
+                                            <h4 class="h5 mb-0">🏢 Historial de Empleos</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="timeline">
+                                                <div class="d-flex align-items-center mb-3">
+                                                    <span class="me-2">🏪</span>
+                                                    <span class="fw-bold">Empresa actual o más reciente</span>
+                                                </div>
+                                                <div class="d-flex align-items-center mb-3">
+                                                    <span class="me-2">👔</span>
+                                                    <span class="fw-bold">Cargo anterior</span>
+                                                </div>
+                                                <div class="d-flex align-items-center mb-3">
+                                                    <span class="me-2">💼</span>
+                                                    <span class="fw-bold">Primer empleo relevante</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-light">
+                                        <div class="card-header bg-light">
+                                            <h4 class="h5 mb-0">🎯 Logros Destacados</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <span class="me-2">📈</span>
+                                                <span>Resultados cuantificables</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-2">
+                                                <span class="me-2">🏆</span>
+                                                <span>Reconocimientos obtenidos</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-2">
+                                                <span class="me-2">✨</span>
+                                                <span>Proyectos exitosos</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-light">
+                                        <div class="card-header bg-light">
+                                            <h4 class="h5 mb-0">🛠️ Habilidades Profesionales</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <span class="me-2">💡</span>
+                                                <span>Competencias técnicas</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-2">
+                                                <span class="me-2">🤝</span>
+                                                <span>Habilidades blandas</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-2">
+                                                <span class="me-2">📊</span>
+                                                <span>Especialidades del sector</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="card border-light">
+                                        <div class="card-header bg-light">
+                                            <h4 class="h5 mb-0">🏭 Sectores de Experiencia</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row g-3">
+                                                <div class="col-md-4">
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="me-2">🎯</span>
+                                                        <span>Sector principal</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="me-2">🔄</span>
+                                                        <span>Sectores secundarios</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="me-2">📈</span>
+                                                        <span>Áreas de especialización</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h4>🔍 JSON Generado</h4>
+                        <pre class="bg-light p-3 rounded"><code>{
+    "historial_empleos": [
+        {
+            "empresa": "TechSolutions S.L.",
+            "cargo": "Desarrollador Senior",
+            "periodo": "2020-actualidad",
+            "responsabilidades": [
+                "Desarrollo de aplicaciones web",
+                "Liderazgo de equipo",
+                "Arquitectura de software"
+            ]
+        },
+        {
+            "empresa": "DataCorp",
+            "cargo": "Desarrollador Full Stack",
+            "periodo": "2017-2020"
+        },
+        {
+            "empresa": "StartupTech",
+            "cargo": "Desarrollador Junior",
+            "periodo": "2015-2017"
+        }
+    ],
+    "logros": [
+        "Incremento del 40% en eficiencia del equipo",
+        "Premio mejor empleado 2022",
+        "5 proyectos exitosos entregados"
+    ],
+    "habilidades": {
+        "tecnicas": ["Python", "JavaScript", "AWS", "Docker"],
+        "blandas": ["Liderazgo", "Comunicación", "Trabajo en equipo"]
+    }
+}</code></pre>
+                     </div>
+                 </section>
+ 
+
+                <section id="perfil-psicologico" class="mb-5">
+                    <h2 class="display-6 mb-4">🧠 Perfil Psicológico</h2>
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-primary text-white">
+                            <h3 class="h4 mb-0">🎭 Características Psicológicas</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Perfil psicológico detallado que incluye:</p>
+                            
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-light">
+                                        <div class="card-header bg-light">
+                                            <h4 class="h5 mb-0">🎭 Rasgos de Personalidad</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">🗣️</span>
+                                                <span>Extraversión <span class="badge bg-primary">1-10</span></span>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">🌟</span>
+                                                <span>Apertura <span class="badge bg-primary">1-10</span></span>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">✅</span>
+                                                <span>Responsabilidad <span class="badge bg-primary">1-10</span></span>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">🤝</span>
+                                                <span>Amabilidad <span class="badge bg-primary">1-10</span></span>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">🧘</span>
+                                                <span>Estabilidad <span class="badge bg-primary">1-10</span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-light">
+                                        <div class="card-header bg-light">
+                                            <h4 class="h5 mb-0">💭 Estilo de Comunicación</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">🗣️</span>
+                                                <span>Forma de expresarse</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">🎯</span>
+                                                <span>Muletillas frecuentes</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">🎯</span>
+                                                <span>Patrones comunicativos</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-light">
+                                        <div class="card-header bg-light">
+                                            <h4 class="h5 mb-0">⭐ Fortalezas y Áreas de Mejora</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">💪</span>
+                                                <span>Puntos fuertes</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">📈</span>
+                                                <span>Áreas de desarrollo</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">🎯</span>
+                                                <span>Oportunidades de crecimiento</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-light">
+                                        <div class="card-header bg-light">
+                                            <h4 class="h5 mb-0">🧮 Indicadores Cognitivos</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">🧠</span>
+                                                <span>IQ (85-145)</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">💫</span>
+                                                <span>Frase motivacional favorita</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">⭐</span>
+                                                <span>Valores personales</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h4>🔍 JSON Generado</h4>
+                        <pre class="bg-light p-3 rounded"><code>{
+    "rasgos_personalidad": {
+        "extraversion": 7,
+        "apertura": 8,
+        "responsabilidad": 9,
+        "amabilidad": 7,
+        "estabilidad": 8
+    },
+    "estilo_comunicacion": {
+        "forma_expresion": "Directa y clara",
+        "muletillas": ["básicamente", "en realidad", "digamos"],
+        "patrones": "Comunicación asertiva con tendencia analítica"
+    },
+    "fortalezas_mejoras": {
+        "puntos_fuertes": [
+            "Resolución de problemas",
+            "Pensamiento analítico",
+            "Trabajo en equipo"
+        ],
+        "areas_desarrollo": [
+            "Gestión del estrés",
+            "Delegación de tareas"
+        ]
+    },
+    "indicadores_cognitivos": {
+        "iq": 120,
+        "frase_motivacional": "La perseverancia vence todos los obstáculos",
+        "valores": ["Honestidad", "Compromiso", "Innovación"]
+    }
+}</code></pre>
+                    </div>
+                </section>
+
+                <section id="perfil-pareja" class="mb-5">
+                    <h2 class="display-6 mb-4">💑 Perfil de Pareja</h2>
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-primary text-white">
+                            <h3 class="h4 mb-0">❤️ Información de la Pareja</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="lead">Perfil detallado de la pareja que incluye:</p>
+                            
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-light">
+                                        <div class="card-header bg-light">
+                                            <h4 class="h5 mb-0">📋 Datos Básicos</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">👤</span>
+                                                <span>Nombre y apellidos</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">🎂</span>
+                                                <span>Edad</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">💕</span>
+                                                <span>Historia del encuentro</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-light">
+                                        <div class="card-header bg-light">
+                                            <h4 class="h5 mb-0">📚 Formación y Carrera</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">🎓</span>
+                                                <span>Estudios realizados</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">💼</span>
+                                                <span>Trabajo actual</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">📈</span>
+                                                <span>Trayectoria profesional</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-light">
+                                        <div class="card-header bg-light">
+                                            <h4 class="h5 mb-0">🚗 Movilidad</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">🎫</span>
+                                                <span>Licencia de conducir</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">🚙</span>
+                                                <span>Vehículo propio</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">🏍️</span>
+                                                <span>Moto (si tiene)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-light">
+                                        <div class="card-header bg-light">
+                                            <h4 class="h5 mb-0">👨‍👩‍👧‍👦 Familia</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">👶</span>
+                                                <span>Hijos (si tienen)</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">🏫</span>
+                                                <span>Educación de los hijos</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3">
+                                                <span class="me-2">🏠</span>
+                                                <span>Situación familiar</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="card border-light">
+                                        <div class="card-header bg-light">
+                                            <h4 class="h5 mb-0">🎭 Características Personales</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row g-3">
+                                                <div class="col-md-4">
+                                                    <div class="card h-100 border-light bg-light">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">
+                                                                <span class="me-2">😅</span>
+                                                                Manías Características
+                                                            </h5>
+                                                            <p class="card-text">3 manías específicas</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="card h-100 border-light bg-light">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">
+                                                                <span class="me-2">💝</span>
+                                                                Aspectos Positivos
+                                                            </h5>
+                                                            <p class="card-text">3 cualidades más apreciadas</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="card h-100 border-light bg-light">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">
+                                                                <span class="me-2">❌</span>
+                                                                Aspectos Mejorables
+                                                            </h5>
+                                                            <p class="card-text">3 aspectos menos apreciados</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h4>🔍 JSON Generado</h4>
+                        <pre class="bg-light p-3 rounded"><code>{
+    "nombre_apellidos": "Laura Martínez Sánchez",
+    "edad": 32,
+    "donde_se_conocieron": "Postgrado en la universidad",
+    "estudios": "Máster en Marketing Digital",
+    "trabajo_actual": "Marketing Manager en AgenciaDig",
+    "conduce": true,
+    "coche": {
+        "tiene": true,
+        "marca": "Volkswagen Golf"
+    },
+    "moto": {
+        "tiene": false,
+        "marca": ""
+    },
+    "hijos": [
+        {
+            "nombre": "Lucas",
+            "edad": 3,
+            "donde_estudia": "Escuela Infantil Arcoiris"
+        }
+    ],
+    "manias": [
+        "Ordenar la ropa por colores",
+        "Revisar tres veces las cerraduras",
+        "Hacer listas para todo"
+    ],
+    "cosas_que_gustan": [
+        "Su dedicación al trabajo",
+        "Su sentido del humor",
+        "Su manera de cuidar a la familia"
+    ],
+    "cosas_que_detesta": [
+        "Dejar las cosas para último momento",
+        "No escuchar cuando habla",
+        "Ser desordenado con los papeles"
+    ]
+}</code></pre>
+                    </div>
+                </section>
+
+                <section id="foto-perfil" class="mb-5">
+                    <h2>📸 Foto del Perfil</h2>
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>🖼️ Imagen Generada</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>El sistema genera una fotografía de perfil realista basada en:</p>
+                            <ul>
+                                <li>🎯 Datos biométricos proporcionados</li>
+                                <li>👤 Características físicas específicas</li>
+                                <li>📊 Edad y sexo de la persona</li>
+                            </ul>
+                            
+                            <div class="mt-4">
+                                <h4>📷 Ejemplos de fotos generadas:</h4>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="card mb-3">
+                                            <img src="fotos/antonio_garcía_martínez.jpeg" class="card-img-top" alt="Ejemplo de foto masculina">
+                                            <div class="card-body">
+                                                <p class="card-text">👨 Antonio García Martínez</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card mb-3">
+                                            <img src="fotos/laura_martínez_sánchez.jpeg" class="card-img-top" alt="Ejemplo de foto femenina">
+                                            <div class="card-body">
+                                                <p class="card-text">👩 Laura Martínez Sánchez</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-info mt-3">
+                                <i class="fas fa-info-circle"></i> Las imágenes son generadas usando Stability AI (SD3)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h4>🔍 Proceso de Generación</h4>
+                        
+                        <!-- Parámetros de configuración -->
+                        <div class="card mb-4">
+                            <div class="card-header bg-light">
+                                <h5 class="mb-0">⚙️ Parámetros de Configuración</h5>
+                            </div>
+                            <div class="card-body">
+                                <pre class="bg-light p-3 rounded"><code>{
+    "parametros": {
+        "tipo_plano": "Retrato (primer plano)",
+        "angulo": "Frontal",
+        "belleza": "natural",
+        "peinado": "casual",
+        "fondo": "fondo neutro"
+    }
+}</code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Prompt generado -->
+                        <div class="card mb-4">
+                            <div class="card-header bg-light">
+                                <h5 class="mb-0">📝 Prompt para Stability AI (SD3)</h5>
+                            </div>
+                            <div class="card-body">
+                                <pre class="bg-light p-3 rounded"><code>Generate a hyperrealistic photograph with these specific characteristics:
+
+PHOTO TYPE:
+- Portrait (close-up)
+- Frontal angle
+- Natural and relaxed pose
+- Professional photo composition
+- Ensure framing respects exactly the requested shot type
+
+PERSON CHARACTERISTICS:
+- Male, 34 years old
+- Natural attractiveness level
+- Brown hair with casual style
+- Brown eyes
+- Athletic build
+- Height 175cm
+
+TECHNICAL ASPECTS:
+- Professional high-quality photography
+- Professional studio lighting
+- Background: neutral background
+- Sharp and clear focus
+- Natural skin textures
+- No filters or artistic effects
+- Realistic photographic quality
+
+IMPORTANT: The shot type must be EXACTLY portrait (close-up), 
+respecting the specified framing and frontal angle.</code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Llamada a la API -->
+                        <div class="card">
+                            <div class="card-header bg-light">
+                                <h5 class="mb-0">🔌 Llamada a la API de Stability AI</h5>
+                            </div>
+                            <div class="card-body">
+                                <pre class="bg-light p-3 rounded"><code>{
+    "url": "https://api.stability.ai/v2beta/stable-image/generate/sd3",
+    "headers": {
+        "Authorization": "Bearer sk-...",
+        "Accept": "image/*"
+    },
+    "data": {
+        "prompt": "Generate a hyperrealistic photograph...",
+        "output_format": "jpeg"
+    }
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="seguridad" class="mb-5">
+                    <h2>Seguridad y Limitaciones</h2>
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Consideraciones Importantes</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="alert alert-warning">
+                                <h4>⚠️ Restricciones de Uso</h4>
+                                <p>Esta herramienta está diseñada exclusivamente para:</p>
+                                <ul>
+                                    <li>Pruebas de desarrollo de software</li>
+                                    <li>Rellenado de bases de datos de prueba</li>
+                                    <li>Prácticas de diseño de interfaces</li>
+                                    <li>Testeo de aplicaciones</li>
+                                </ul>
+                            </div>
+                            <div class="alert alert-info">
+                                <h4>📝 Declaración de Responsabilidad</h4>
+                                <p>Al utilizar esta herramienta, el usuario:</p>
+                                <ul>
+                                    <li>Acepta utilizarla únicamente con fines educativos y de desarrollo</li>
+                                    <li>Asume toda la responsabilidad por el uso indebido de la misma</li>
+                                    <li>Reconoce que los datos generados son ficticios y no deben usarse como reales</li>
+                                    <li>Se compromete a cumplir con las leyes de protección de datos aplicables</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light mt-5">
+        <div class="container py-4">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card border-light">
+                        <div class="card-body">
+                            <h4 class="card-title">🤖 Sobre el Proyecto</h4>
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="me-2">📱</span>
+                                <span>Versión 0.2</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="me-2">👨‍💻</span>
+                                <span><a href="https://x.com/hex686f6c61" target="_blank" class="text-decoration-none">@hex686f6c61</a></span>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="me-2">📂</span>
+                                <span><a href="https://github.com/686f6c61/fake-id-profile-photo" target="_blank" class="text-decoration-none">GitHub: fake-id-profile-photo</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card border-light">
+                        <div class="card-body">
+                            <h4 class="card-title">🔧 Tecnologías</h4>
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="me-2">🤖</span>
+                                <span>Claude 3.5 Sonnet</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="me-2">🎨</span>
+                                <span>Stability AI (SD3)</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="me-2">🐍</span>
+                                <span>Python</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </footer>
+
+    <!-- Scripts de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

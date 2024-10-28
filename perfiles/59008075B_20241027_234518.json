@@ -1,0 +1,399 @@
+{
+  "datos_personales": {
+    "nombre_completo": "Laura Martínez Sánchez",
+    "sexo": "Mujer",
+    "edad": 34,
+    "dni": "59008075B",
+    "direccion": "Calle Toledo 23, 4º B, 28005 Madrid",
+    "datos_biometricos": {
+      "altura": "168 cm",
+      "peso": "62 kg",
+      "color_ojos": "Marrón",
+      "color_pelo": "Castaño oscuro",
+      "constitucion": "Atlética",
+      "marcas_visibles": "Pequeña cicatriz en la barbilla"
+    }
+  },
+  "historia_familiar": {
+    "padres": {
+      "padre": {
+        "nombre": "Antonio Martínez García",
+        "edad": 65,
+        "profesion": "Arquitecto jubilado"
+      },
+      "madre": {
+        "nombre": "Carmen Sánchez Ruiz",
+        "edad": 62,
+        "profesion": "Profesora de instituto"
+      }
+    },
+    "hermanos": [
+      {
+        "nombre": "Miguel Martínez Sánchez",
+        "edad": 38,
+        "profesion": "Médico"
+      },
+      {
+        "nombre": "Sara Martínez Sánchez",
+        "edad": 30,
+        "profesion": "Abogada"
+      }
+    ],
+    "abuelos": {
+      "paternos": {
+        "abuelo": "Francisco Martínez Romero (fallecido)",
+        "abuela": "María García López (89 años)"
+      },
+      "maternos": {
+        "abuelo": "José Sánchez Vega (92 años)",
+        "abuela": "Ana Ruiz Torres (fallecida)"
+      }
+    },
+    "eventos_importantes": [
+      "1989: Nacimiento de Laura en Madrid",
+      "1992: Mudanza familiar a una casa más grande en el barrio de La Latina",
+      "1995: Primera comunión de Laura",
+      "1998: Viaje familiar memorable a Disney París",
+      "2001: Fallecimiento del abuelo paterno Francisco",
+      "2004: Graduación de bachillerato con honores",
+      "2007: Inicio de la carrera universitaria en Económicas",
+      "2009: Fallecimiento de la abuela materna Ana",
+      "2011: Graduación universitaria y primer trabajo",
+      "2013: Boda de su hermano Miguel",
+      "2015: Nacimiento de su primer sobrino",
+      "2017: Ascenso importante en su empresa",
+      "2019: Conoce a su actual pareja David",
+      "2020: Compra de su primer piso en Madrid",
+      "2022: Viaje familiar de reconciliación tras la pandemia"
+    ],
+    "amigos": [
+      {
+        "nombre_apellidos": "Patricia Gómez Ruiz",
+        "estudios": "Máster en Marketing Digital",
+        "ciudad_residencia": "Madrid",
+        "trabajo_actual": "Directora de Marketing en Google España",
+        "situacion_sentimental": "Casada",
+        "pareja": "Alberto Sanz"
+      },
+      {
+        "nombre_apellidos": "Carlos Fernández López",
+        "estudios": "Ingeniería Informática",
+        "ciudad_residencia": "Barcelona",
+        "trabajo_actual": "Desarrollador Senior en Amazon",
+        "situacion_sentimental": "Soltero",
+        "pareja": ""
+      },
+      {
+        "nombre_apellidos": "Marina Torres Vega",
+        "estudios": "Arquitectura",
+        "ciudad_residencia": "Madrid",
+        "trabajo_actual": "Estudio de arquitectura propio",
+        "situacion_sentimental": "Divorciada",
+        "pareja": ""
+      },
+      {
+        "nombre_apellidos": "Roberto Díaz Martín",
+        "estudios": "Económicas",
+        "ciudad_residencia": "Valencia",
+        "trabajo_actual": "Consultor financiero",
+        "situacion_sentimental": "En pareja",
+        "pareja": "Elena Moreno"
+      },
+      {
+        "nombre_apellidos": "Ana Pérez Castro",
+        "estudios": "Psicología",
+        "ciudad_residencia": "Madrid",
+        "trabajo_actual": "Psicóloga clínica",
+        "situacion_sentimental": "Casada",
+        "pareja": "Luis Ramírez"
+      },
+      {
+        "nombre_apellidos": "Juan Morales Silva",
+        "estudios": "MBA",
+        "ciudad_residencia": "Madrid",
+        "trabajo_actual": "Director financiero en BBVA",
+        "situacion_sentimental": "Casado",
+        "pareja": "María González"
+      }
+    ],
+    "situacion_sentimental": "En pareja con David Rodríguez Navarro, ingeniero de 36 años"
+  },
+  "educacion": {
+    "primaria": {
+      "centro": "Colegio Público García Lorca",
+      "periodo": "1995-2001",
+      "ubicacion": "Madrid"
+    },
+    "secundaria": {
+      "centro": "IES Tirso de Molina",
+      "periodo": "2001-2007",
+      "especialidad": "Ciencias de la Salud"
+    },
+    "universidad": {
+      "centro": "Universidad Complutense de Madrid",
+      "carrera": "Grado en Fisioterapia",
+      "periodo": "2007-2011",
+      "notas_destacadas": "Matrícula de honor en Biomecánica y Premio Extraordinario de Fin de Carrera"
+    },
+    "otros_cursos": [
+      {
+        "nombre": "Especialización en Fisioterapia Deportiva",
+        "centro": "Real Federación Española de Atletismo",
+        "duracion": "300 horas",
+        "año": "2012"
+      },
+      {
+        "nombre": "Certificación en Técnicas de Punción Seca",
+        "centro": "Instituto de Terapias Manuales",
+        "duracion": "150 horas",
+        "año": "2014"
+      },
+      {
+        "nombre": "Experto en Rehabilitación Post-quirúrgica",
+        "centro": "Hospital Clínico San Carlos",
+        "duracion": "200 horas",
+        "año": "2016"
+      }
+    ]
+  },
+  "experiencia": {
+    "trabajos": [
+      {
+        "empresa": "Centro Deportivo de Alto Rendimiento Madrid",
+        "cargo": "Fisioterapeuta Deportiva Senior",
+        "periodo": "2018-Presente",
+        "responsabilidades": [
+          "Evaluación y tratamiento de lesiones deportivas en atletas de élite",
+          "Desarrollo de programas de prevención de lesiones",
+          "Coordinación del equipo de fisioterapia deportiva",
+          "Rehabilitación post-competición"
+        ],
+        "logros": [
+          "Reducción del 40% en el tiempo de recuperación de lesiones musculares",
+          "Implementación exitosa de un programa preventivo que redujo lesiones en un 25%",
+          "Reconocimiento como mejor profesional del año 2021"
+        ]
+      },
+      {
+        "empresa": "Hospital Clínico San Carlos",
+        "cargo": "Fisioterapeuta de Rehabilitación",
+        "periodo": "2015-2018",
+        "responsabilidades": [
+          "Rehabilitación post-quirúrgica de pacientes",
+          "Desarrollo de planes de tratamiento personalizados",
+          "Coordinación con equipo médico multidisciplinar",
+          "Supervisión de estudiantes en prácticas"
+        ],
+        "logros": [
+          "Desarrollo de nuevo protocolo de rehabilitación post-operatoria",
+          "Mejora del 30% en índices de satisfacción del paciente",
+          "Formación exitosa de 15 estudiantes en prácticas"
+        ]
+      },
+      {
+        "empresa": "Clínica Fisioterapia ActiveLife",
+        "cargo": "Fisioterapeuta Junior",
+        "periodo": "2011-2015",
+        "responsabilidades": [
+          "Tratamiento de pacientes con diversas patologías",
+          "Aplicación de técnicas de punción seca",
+          "Realización de valoraciones iniciales",
+          "Mantenimiento de registros clínicos"
+        ],
+        "logros": [
+          "Incremento del 50% en la cartera de pacientes",
+          "Especialización en técnicas de terapia manual",
+          "Implementación de nuevo sistema de seguimiento de pacientes"
+        ]
+      }
+    ],
+    "habilidades": [
+      "Técnicas de terapia manual avanzada",
+      "Punción seca",
+      "Rehabilitación deportiva",
+      "Vendaje neuromuscular",
+      "Gestión de equipos",
+      "Valoración biomecánica",
+      "Rehabilitación post-quirúrgica",
+      "Planificación de tratamientos"
+    ],
+    "sectores_experiencia": [
+      "Fisioterapia deportiva",
+      "Rehabilitación hospitalaria",
+      "Clínica privada",
+      "Medicina deportiva",
+      "Rehabilitación post-quirúrgica"
+    ]
+  },
+  "perfil_psicologico": {
+    "rasgos_principales": {
+      "extraversion": {
+        "puntuacion": 7,
+        "ejemplos": [
+          "Mantiene una red social activa y diversa de amigos profesionales",
+          "Se desenvuelve con naturalidad en entornos grupales como el centro deportivo",
+          "Disfruta compartiendo conocimientos con estudiantes y colegas"
+        ]
+      },
+      "apertura": {
+        "puntuacion": 8,
+        "ejemplos": [
+          "Constante búsqueda de formación y especialización en su campo",
+          "Adaptación a diferentes entornos laborales (clínica, hospital, centro deportivo)",
+          "Interés por nuevas técnicas y metodologías de tratamiento"
+        ]
+      },
+      "responsabilidad": {
+        "puntuacion": 9,
+        "ejemplos": [
+          "Excelente historial académico con matrícula de honor",
+          "Progresión profesional constante y logros medibles",
+          "Capacidad para coordinar equipos y mantener registros detallados"
+        ]
+      },
+      "amabilidad": {
+        "puntuacion": 8,
+        "ejemplos": [
+          "Altos índices de satisfacción en el trato con pacientes",
+          "Buena relación con equipos multidisciplinares",
+          "Disposición para formar a nuevos profesionales"
+        ]
+      },
+      "estabilidad": {
+        "puntuacion": 7,
+        "ejemplos": [
+          "Manejo efectivo del estrés en entornos hospitalarios",
+          "Capacidad para mantener relaciones laborales y personales duraderas",
+          "Adaptación positiva a cambios profesionales"
+        ]
+      }
+    },
+    "fortalezas": [
+      "Excelente capacidad de organización y planificación",
+      "Habilidad para el trabajo en equipo",
+      "Alta capacidad de aprendizaje y adaptación",
+      "Empatía y habilidades de comunicación",
+      "Compromiso con la excelencia profesional"
+    ],
+    "areas_mejora": [
+      "Tendencia al perfeccionismo excesivo",
+      "Dificultad para delegar responsabilidades",
+      "Ocasional sobrecarga de trabajo por alto nivel de autoexigencia",
+      "Necesidad de mejorar el equilibrio trabajo-vida personal"
+    ],
+    "estilo_comunicacion": {
+      "descripcion": "Comunicación asertiva y profesional, con un tono cálido y cercano. Capacidad para adaptar el lenguaje técnico a diferentes interlocutores.",
+      "muletillas": [
+        "En realidad...",
+        "¿Sabes lo que te quiero decir?",
+        "Desde mi punto de vista profesional...",
+        "Efectivamente"
+      ]
+    },
+    "valores": [
+      "Excelencia profesional",
+      "Aprendizaje continuo",
+      "Compromiso con el bienestar de los pacientes",
+      "Trabajo en equipo",
+      "Integridad",
+      "Familia"
+    ],
+    "formas_de_actuar": [
+      "Llega siempre 10 minutos antes a sus citas",
+      "Mantiene un registro detallado de la evolución de cada paciente",
+      "Dedica tiempo extra a la formación continua los fines de semana",
+      "Organiza reuniones semanales con su equipo para coordinar casos",
+      "Practica deporte regularmente para mantener su forma física",
+      "Realiza llamadas de seguimiento a pacientes complejos",
+      "Prepara meticulosamente sus sesiones del día siguiente",
+      "Participa activamente en congresos y seminarios de su especialidad",
+      "Mantiene un equilibrio entre vida profesional y personal mediante rutinas establecidas",
+      "Busca feedback constante para mejorar sus técnicas y tratamientos"
+    ],
+    "iq": 128,
+    "frase_motivacional": "El éxito no es el final, el fracaso no es fatal: es el coraje para continuar lo que cuenta"
+  },
+  "perfil_pareja": {
+    "nombre_apellidos": "Carlos Ruiz Fernández",
+    "edad": 36,
+    "donde_se_conocieron": "En un gimnasio de Madrid en 2018",
+    "estudios": "Ingeniero Industrial por la Universidad Politécnica de Madrid",
+    "trabajo_actual": "Project Manager en una empresa de energías renovables",
+    "conduce": true,
+    "coche": {
+      "tiene": true,
+      "marca": "Volvo XC40"
+    },
+    "moto": {
+      "tiene": false,
+      "marca": ""
+    },
+    "hijos": [
+      {
+        "nombre": "Lucas Ruiz Martínez",
+        "edad": 3,
+        "donde_estudia": "Escuela Infantil El Bosque"
+      }
+    ],
+    "manias": [
+      "Organizar la ropa del armario por colores",
+      "Revisar tres veces que ha cerrado el coche",
+      "Tomar el café siempre en la misma taza"
+    ],
+    "cosas_que_gustan": [
+      "Su sentido de la responsabilidad",
+      "Lo cariñoso que es con su hijo",
+      "Su capacidad de organización"
+    ],
+    "cosas_que_detesta": [
+      "Que sea demasiado perfeccionista",
+      "Que tarde mucho en tomar decisiones",
+      "Que sea tan obsesivo con la limpieza"
+    ]
+  },
+  "otros_datos": {
+    "mascota": {
+      "tiene": true,
+      "raza": "Gato Siamés",
+      "nombre": "Luna",
+      "edad": 3
+    },
+    "conduccion": {
+      "coche": {
+        "conduce": true,
+        "marca": "Volkswagen",
+        "modelo": "Golf",
+        "anos": 5,
+        "edad_carnet": 18
+      },
+      "moto": {
+        "conduce": false,
+        "marca": "",
+        "anos": 0,
+        "cilindrada": "",
+        "ano_carnet": 0
+      }
+    },
+    "ultima_lesion": "Esguince de tobillo hace 6 meses practicando running",
+    "hobbies": [
+      {
+        "nombre": "Running",
+        "descripcion": "Entrena 3 veces por semana y participa en carreras populares de 10km"
+      },
+      {
+        "nombre": "Fotografía",
+        "descripcion": "Especializada en fotografía de naturaleza, tiene una cámara réflex Canon"
+      },
+      {
+        "nombre": "Cocina",
+        "descripcion": "Apasionada de la repostería, toma clases los fines de semana"
+      }
+    ],
+    "color_favorito": "Verde esmeralda",
+    "estilo_vestimenta": "Casual chic",
+    "prenda_favorita": "Blazer negra",
+    "talla_zapatos": "38",
+    "talla_ropa": "M"
+  },
+  "foto_perfil": null
+}
