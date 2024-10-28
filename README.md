@@ -16,13 +16,17 @@ Sistema avanzado para la generación de identidades, perfiles y fotografías con
 - 🧠 Perfil psicológico
 - 💑 Perfil de pareja
 - 📸 Fotografía de perfil generada por IA
+- 📜 Generación de storytelling en diferentes estilos narrativos
+- 🌍 Búsqueda de lugares de viaje usando Wikipedia
 
 ## 🛠️ Tecnologías Utilizadas
 
 - 🤖 Claude 3.5 Sonnet (Anthropic)
 - 🎨 Stability AI (SD3)
+- 🌐 GPT-4 Turbo (OpenAI)
 - 🐍 Python
 - 🌐 Bootstrap 5
+- 📚 Wikipedia API
 
 ## 🔑 Configuración
 
@@ -30,7 +34,8 @@ Para utilizar este sistema, necesitarás:
 
 1. API Key de Anthropic
 2. API Key de Stability AI
-3. Configurar las variables de entorno:
+3. API Key de OpenAI
+4. Configurar las variables de entorno:
 
 ## 🚀 Funcionalidades
 
@@ -40,6 +45,13 @@ Para utilizar este sistema, necesitarás:
 - Exportación de datos en formato JSON
 - Interfaz web responsive
 - Modo claro/oscuro
+- Generación de storytelling en diferentes estilos narrativos:
+  - Narrativa Literaria (estilo novela)
+  - Dossier Profesional (estilo informe)  
+  - Perfil Periodístico (estilo reportaje)
+  - Biografía Técnica (estilo CV expandido)
+  - Informe Psicológico (estilo clínico)
+- Búsqueda de lugares de viaje relevantes usando la API de Wikipedia
 
 ## 🛡️ Limitaciones y Uso Responsable
 

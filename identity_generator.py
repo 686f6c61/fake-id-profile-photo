@@ -6,6 +6,10 @@ from dotenv import load_dotenv
 from anthropic import Anthropic
 import re
 from photo_generator import GeneradorFotos
+from storytelling_generator import GeneradorStorytelling
+from wiki_manager import WikipediaManager
+from openai import OpenAI
+from html_generator import GeneradorHTML
 
 class GeneradorIdentidadClaude:
     def __init__(self):
@@ -19,43 +23,61 @@ class GeneradorIdentidadClaude:
             "perfil_psicologico": None,
             "perfil_pareja": None,
             "otros_datos": None,
-            "foto_perfil": None  # Nueva clave para guardar la ruta de la foto
+            "foto_perfil": None,  # Nueva clave para guardar la ruta de la foto
+            "perfil_social": None
         }
+        self.wiki_manager = WikipediaManager()
 
     def configurar_api(self):
-        """Configura y valida la API key de Claude"""
-        # Intentar cargar de .env
+        """Configura las APIs necesarias"""
         load_dotenv()
-        api_key = os.getenv('ANTHROPIC_API_KEY')
         
-        while not api_key:
-            print("\n=== CONFIGURACIÓN DE API DE CLAUDE ===")
-            api_key = input("Por favor, introduce tu API key de Claude (comienza con 'sk-ant-'): ")
-            
-            if api_key.startswith('sk-ant-'):
-                # Guardar en .env para futuros usos
-                with open('.env', 'w') as f:
-                    f.write(f"ANTHROPIC_API_KEY={api_key}")
-            else:
-                print("❌ API key inválida. Debe comenzar con 'sk-ant-'")
-                api_key = None
+        # Configurar Claude
+        api_key_claude = os.getenv('ANTHROPIC_API_KEY')
+        if api_key_claude:
+            self.anthropic = Anthropic(api_key=api_key_claude)
+            print("✅ API key de Claude configurada correctamente")
+        else:
+            print("❌ No se encontró la API key de Claude")
+            return False
         
-        self.anthropic = Anthropic(api_key=api_key)
+        # Configurar Stability AI
+        api_key_stability = os.getenv('STABILITY_API_KEY')
+        if api_key_stability:
+            print("✅ API key de Stability AI configurada correctamente")
+        else:
+            print("❌ No se encontró la API key de Stability AI")
+            return False
         
-        # Validar la conexión
+        # Configurar OpenAI (una sola vez)
+        api_key_openai = os.getenv('OPENAI_API_KEY')
+        if api_key_openai:
+            try:
+                self.openai_client = OpenAI(api_key=api_key_openai)
+                self.openai_client.models.list()
+                print("✅ API key de OpenAI configurada correctamente")
+            except Exception as e:
+                print(f"❌ Error al validar la API key de OpenAI: {e}")
+                return False
+        else:
+            print("❌ No se encontró la API key de OpenAI")
+            return False
+        
+        # Configurar Wikipedia
         try:
-            response = self.anthropic.messages.create(
-                model="claude-3-5-sonnet-20241022",
-                max_tokens=10,
-                messages=[{
-                    "role": "user",
-                    "content": "Test de conexión"
-                }]
-            )
-            print("✅ Conexión con Claude establecida correctamente")
+            self.wiki_manager = WikipediaManager()
+            # Hacer una búsqueda de prueba para validar
+            test_result = self.wiki_manager.wiki.page("España")
+            if test_result.exists():
+                print("✅ API de Wikipedia configurada correctamente")
+            else:
+                print("❌ Error al validar la API de Wikipedia")
+                return False
         except Exception as e:
-            print(f"❌ Error al conectar con Claude: {e}")
-            self.configurar_api()  # Recursivamente pedir una nueva key si falla
+            print(f"❌ Error al configurar Wikipedia: {e}")
+            return False
+        
+        return True
 
     def validar_dni(self, numero):
         letras = "TRWAGMYFPDXBNJZSQVHLCKE"
@@ -286,8 +308,8 @@ class GeneradorIdentidadClaude:
         - Si tiene moto (marca si tiene)
         - Hijos (nombres, edades y dónde estudian si los tienen)
         - 3 manías que tiene
-        - 3 cosas que más le gustan a su pareja de ella/él
-        - 3 cosas que más detesta su pareja de ella/él
+        - 3 cosas que más le gustan de su pareja
+        - 3 cosas que más detesta de su pareja
         
         Devuelve los datos en formato JSON con estas claves exactas:
         {{
@@ -390,7 +412,7 @@ class GeneradorIdentidadClaude:
         try:
             response = self.anthropic.messages.create(
                 model="claude-3-5-sonnet-20241022",
-                max_tokens=1000,
+                max_tokens=2500,
                 temperature=0.7,
                 messages=[{
                     "role": "user",
@@ -460,7 +482,7 @@ class GeneradorIdentidadClaude:
         try:
             response = self.anthropic.messages.create(
                 model="claude-3-5-sonnet-20241022",
-                max_tokens=1000,
+                max_tokens=2500,
                 temperature=0.7,
                 messages=[{
                     "role": "user",
@@ -601,45 +623,68 @@ class GeneradorIdentidadClaude:
         
         return json_str
 
-    def generar_identidad_completa(self, con_indicaciones):
-        secciones = [
-            ("datos personales", self.generar_datos_personales),
-            ("historia familiar", self.generar_historia_familiar),
-            ("historial educativo", self.generar_educacion),
-            ("experiencia laboral", self.generar_experiencia),
-            ("perfil psicológico", self.generar_perfil_psicologico),
-            ("otros datos", self.generar_otros_datos)
-        ]
-        
-        for nombre_seccion, funcion in secciones:
-            print(f"\nGenerando {nombre_seccion}...")
-            if con_indicaciones:
-                preferencias = input(f"Indique preferencias para {nombre_seccion} (o presione Enter para ninguna): ")
-                datos = funcion(preferencias if preferencias else None)
-            else:
-                datos = funcion()
+    def generar_identidad_completa(self, con_indicaciones=False):
+        try:
+            content = None  # Inicializar con None
             
-            if datos:
-                print(f"✅ {nombre_seccion.capitalize()} generados correctamente")
+            # Generar todas las secciones
+            self.generar_datos_personales(input("Indicaciones para datos personales: ") if con_indicaciones else None)
+            self.generar_historia_familiar(input("Indicaciones para historia familiar: ") if con_indicaciones else None)
+            self.generar_educacion(input("Indicaciones para educación: ") if con_indicaciones else None)
+            self.generar_experiencia(input("Indicaciones para experiencia: ") if con_indicaciones else None)
+            self.generar_perfil_social(input("Indicaciones para perfil social: ") if con_indicaciones else None)  # Nueva línea
+            self.generar_perfil_psicologico(input("Indicaciones para perfil psicológico: ") if con_indicaciones else None)
+            self.generar_otros_datos(input("Indicaciones para otros datos: ") if con_indicaciones else None)
+            
+            print("\n✅ Identidad completa generada exitosamente")
+            
+            # Preguntar si desea guardar la identidad
+            guardar = input("\n¿Desea guardar la identidad generada? (s/n): ").lower()
+            if guardar == 's':
+                print("\nSeleccione el formato de guardado:")
+                print("1. JSON (recomendado para reutilización)")
+                print("2. TXT (más legible)")
+                print("3. Ambos formatos")
+                
+                formato = input("Seleccione una opción (1-3): ")
+                
+                if formato in ['1', '2', '3']:
+                    if formato in ['1', '3']:
+                        archivo_json = self.guardar_en_archivo(formato='json')
+                        if archivo_json:
+                            print(f"✨ Identidad guardada en JSON: {archivo_json}")
+                
+                    if formato in ['2', '3']:
+                        archivo_txt = self.guardar_en_archivo(formato='txt')
+                        if archivo_txt:
+                            print(f"✨ Identidad guardada en TXT: {archivo_txt}")
+                else:
+                    print("❌ Opción no válida. No se guardó la identidad.")
+            
+            # Preguntar si desea generar una foto
+            generar_foto = input("\n¿Desea generar una foto de perfil? (s/n): ").lower()
+            if generar_foto == 's':
+                self.generar_foto_perfil()
+                print("\n✅ Foto de perfil generada exitosamente")
+            
+            if content:
+                # Procesar 'content' solo si tiene un valor
+                self.identidad['datos_personales'] = json.loads(content)
             else:
-                print(f"❌ Error al generar {nombre_seccion}")
-        
-        if "historia_familiar" in self.identidad and self.identidad["historia_familiar"].get("situacion_sentimental") == "En pareja":
-            print("\nGenerando perfil de la pareja...")
-            self.generar_perfil_pareja()
+                raise Exception("No se pudo generar los datos personales")
+            
+            return True
+            
+        except Exception as e:
+            print(f"\n❌ Error al generar la identidad completa: {e}")
+            return False
 
-        # Añadir pregunta para generar foto
-        if input("\n¿Desea generar una foto de perfil? (s/n): ").lower() == 's':
-            self.generar_foto_perfil()
-
-    def guardar_en_archivo(self):
+    def guardar_en_archivo(self, formato='json'):
         if not os.path.exists('perfiles'):
             os.makedirs('perfiles')
             
         dni = self.identidad['datos_personales']['dni']
         fecha = datetime.now().strftime("%Y%m%d_%H%M%S")
-        
-        formato = input("¿En qué formato desea guardar el archivo? (json/txt): ").lower()
         
         if formato == 'json':
             nombre_archivo = f"perfiles/{dni}_{fecha}.json"
@@ -788,15 +833,122 @@ class GeneradorIdentidadClaude:
 
     def generar_foto_perfil(self):
         """Genera una foto de perfil usando el GeneradorFotos"""
-        if not self.identidad["datos_personales"]:
-            print("❌ Error: Primero debes generar los datos personales")
+        try:
+            # Verificar que existen datos personales
+            if not self.identidad["datos_personales"]:
+                print("\n❌ Error: Primero debes generar los datos personales")
+                return None
+
+            # Verificar que los datos necesarios están presentes
+            datos_requeridos = ["sexo", "edad", "datos_biometricos"]
+            for dato in datos_requeridos:
+                if dato not in self.identidad["datos_personales"]:
+                    print(f"\n❌ Error: Falta información de {dato} en los datos personales")
+                    return None
+
+            # Verificar datos biométricos
+            datos_biometricos = ["color_pelo", "color_ojos", "constitucion"]
+            for dato in datos_biometricos:
+                if dato not in self.identidad["datos_personales"]["datos_biometricos"]:
+                    print(f"\n❌ Error: Falta información de {dato} en los datos biométricos")
+                    return None
+
+            print("\n📸 Generando foto de perfil...")
+            ruta_foto = self.generador_fotos.generar_foto(self.identidad["datos_personales"])
+            
+            if ruta_foto:
+                self.identidad["foto_perfil"] = ruta_foto
+                print(f"\n✅ Foto de perfil generada y guardada en: {ruta_foto}")
+                return ruta_foto
+            else:
+                print("\n❌ Error al generar la foto de perfil")
+                return None
+
+        except Exception as e:
+            print(f"\n❌ Error inesperado al generar foto de perfil: {e}")
             return None
 
-        ruta_foto = self.generador_fotos.generar_foto(self.identidad["datos_personales"])
-        if ruta_foto:
-            self.identidad["foto_perfil"] = ruta_foto
-            print(f"✅ Foto de perfil generada y guardada en: {ruta_foto}")
-        return ruta_foto
+    def generar_anecdotas_viaje(self, viaje):
+        """Genera anécdotas culturales específicas para un viaje usando GPT-4"""
+        prompt_anecdotas = f"""Genera 3 anécdotas culturales específicas y memorables sobre este viaje:
+
+        Lugar: {viaje['lugar']}
+        Fecha: {viaje['fecha']}
+        Duración: {viaje['duracion']}
+        Motivo: {viaje['motivo']}
+        Acompañantes: {viaje['acompanantes']}
+
+        Las anécdotas deben:
+        - Estar relacionadas con la cultura local (gastronomía, costumbres, eventos, etc.)
+        - Ser específicas y detalladas
+        - Incluir interacciones con locales o experiencias únicas
+        - Mencionar lugares o eventos reales de la ciudad
+        - Tener entre 3-4 líneas cada una
+
+        Devuelve un JSON con esta estructura exacta:
+        {{
+            "anecdotas_culturales": [
+                {{
+                    "titulo": "título breve de la anécdota",
+                    "descripcion": "descripción detallada de la anécdota",
+                    "lugar_especifico": "nombre del lugar donde ocurrió",
+                    "elementos_culturales": ["elemento cultural 1", "elemento cultural 2"]
+                }},
+                {{anécdota 2}},
+                {{anécdota 3}}
+            ]
+        }}"""
+
+        try:
+            response = self.openai_client.chat.completions.create(
+                model="gpt-4-turbo-preview",
+                messages=[{"role": "user", "content": prompt_anecdotas}],
+                temperature=0.8,
+                max_tokens=1000
+            )
+            
+            contenido = response.choices[0].message.content
+            json_match = re.search(r'\{.*\}', contenido, re.DOTALL)
+            if json_match:
+                return json.loads(json_match.group())
+            return None
+        except Exception as e:
+            print(f"❌ Error al generar anécdotas culturales: {e}")
+            return None
+
+    def generar_perfil_social(self, preferencias=None):
+        """Genera el perfil social completo con viajes y anécdotas culturales"""
+        try:
+            # Generar viajes y datos básicos como antes
+            # ... código existente ...
+
+            # Añadir anécdotas culturales a cada viaje
+            print("\nGenerando anécdotas culturales para cada viaje...")
+
+            for viaje in viajes["viajes_espana"]:
+                anecdotas = self.generar_anecdotas_viaje(viaje)
+                if anecdotas:
+                    viaje["anecdotas_culturales"] = anecdotas["anecdotas_culturales"]
+                    print(f"✅ Anécdotas generadas para {viaje['lugar']}")
+            
+            for viaje in viajes["viajes_internacional"]:
+                anecdotas = self.generar_anecdotas_viaje(viaje)
+                if anecdotas:
+                    viaje["anecdotas_culturales"] = anecdotas["anecdotas_culturales"]
+                    print(f"✅ Anécdotas generadas para {viaje['lugar']}, {viaje['pais']}")
+
+            # Continuar con el resto del perfil social...
+
+            self.identidad["perfil_social"] = perfil_social
+            print("✅ Perfil social generado exitosamente")
+            return perfil_social
+
+        except json.JSONDecodeError as e:
+            print(f"❌ Error al decodificar JSON: {e}")
+            return None
+        except Exception as e:
+            print(f"❌ Error al generar perfil social: {e}")
+            return None
 
 def mostrar_menu_principal():
     print("\n=== MENÚ PRINCIPAL ===")
@@ -804,40 +956,30 @@ def mostrar_menu_principal():
     print("2. Generar historia familiar")
     print("3. Generar historial educativo")
     print("4. Generar experiencia laboral")
-    print("5. Generar perfil psicológico")
-    print("6. Generar otros datos")
-    print("7. Generar identidad completa")
-    print("8. Generar imagen desde archivo existente")  # Nueva opción
-    print("9. Guardar identidad en archivo (JSON o TXT)")
-    print("10. Salir")
-    return input("Seleccione una opción (1-10): ")
+    print("5. Generar perfil social")
+    print("6. Generar perfil psicológico")
+    print("7. Generar otros datos")
+    print("8. Generar identidad completa")
+    print("9. Generar imagen desde archivo existente")
+    print("10. Guardar identidad en archivo")
+    print("11. Generar storytelling narrativo")
+    print("12. Generar vista HTML del perfil (beta)")  # Modificado
+    print("13. Salir")
+    return input("Seleccione una opción (1-13): ")
 
-def mostrar_introduccion():
-    """Muestra la introducción del programa"""
-    print("\n     GENERADOR DE IDENTIDADES SIMULADAS v2.0      ")
-    print("==================================================")
-    print("\nBienvenido al Generador de Identidades Simuladas.")
-    print("Este programa utiliza las APIs de Anthropic (Claude 3.5 Sonnet)")
-    print("y Stability AI (SD3) para crear perfiles ficticios")
-    print("detallados y coherentes, incluyendo fotos realistas.")
-    print("\nDesarrollado por: @hex686f6c61")
-    print("GitHub: https://github.com/686f6c61")
-    print("\nPuede generar los siguientes componentes:")
-    print("  - Datos personales")
-    print("  - Historia familiar")
-    print("  - Historial educativo")
-    print("  - Experiencia laboral")
-    print("  - Perfil psicológico")
-    print("  - Otros datos")
-    print("  - Fotos de perfil realistas")
-    print("\nAl final, podrá guardar la identidad generada")
-    print("en un archivo JSON o TXT, y las fotos en formato JPEG.")
-    print("\nPresione Enter para comenzar o Ctrl+C para salir...")
-    try:
-        input()
-    except KeyboardInterrupt:
-        print("\n\nSaliendo del programa...")
-        raise
+def mostrar_banner_inicial():
+    """Muestra el banner inicial del programa"""
+    print("""
+╔════════════════════════════════════════╗
+║     GENERADOR DE IDENTIDADES 2.0       ║
+║                                        ║
+║  Desarrollado por: @hex686f6c61        ║
+║  GitHub: github.com/686f6c61           ║
+╚════════════════════════════════════════╝
+    """)
+    
+    print("🤖 Sistema Iniciado")
+    print("📝 Listo para generar perfiles\n")
 
 def cargar_datos_archivo():
     """Carga datos biométricos desde un archivo existente"""
@@ -908,81 +1050,245 @@ def cargar_datos_archivo():
         print(f"❌ Error al cargar el archivo: {e}")
         return None
 
-# Modificar el main() para incluir la nueva opción
 def main():
     try:
-        mostrar_introduccion()
-        
-        print("\nConfigurando la conexión con Claude...")
+        # Inicialización
+        mostrar_banner_inicial()
         generador = GeneradorIdentidadClaude()
+        storytelling = GeneradorStorytelling()
         
         while True:
-            opcion = mostrar_menu_principal()
+            mostrar_menu_principal()
+            opcion = input("Seleccione una opción (1-13): ").strip()
             
-            if opcion in ['1', '2', '3', '4', '5', '6']:
-                preferencias = input("Indique preferencias (o presione Enter para ninguna): ")
-                if opcion == '1':
-                    datos = generador.generar_datos_personales(preferencias if preferencias else None)
-                elif opcion == '2':
-                    datos = generador.generar_historia_familiar(preferencias if preferencias else None)
-                elif opcion == '3':
-                    datos = generador.generar_educacion(preferencias if preferencias else None)
-                elif opcion == '4':
-                    datos = generador.generar_experiencia(preferencias if preferencias else None)
-                elif opcion == '5':
-                    datos = generador.generar_perfil_psicologico(preferencias if preferencias else None)
-                elif opcion == '6':
-                    datos = generador.generar_otros_datos(preferencias if preferencias else None)
-                
-                if datos:
-                    print("\nDatos generados:")
-                    print(json.dumps(datos, indent=2, ensure_ascii=False))
-            
-            elif opcion == '7':
-                con_indicaciones = input("¿Desea proporcionar indicaciones para cada parte? (s/n): ").lower() == 's'
-                generador.generar_identidad_completa(con_indicaciones)
-                print("\n✅ Identidad completa generada")
-            
-            elif opcion == '8':
-                datos = cargar_datos_archivo()
-                if datos:
-                    generador.identidad['datos_personales'] = datos
-                    generador.generar_foto_perfil()
-                    print("\n✅ Imagen generada exitosamente")
-                else:
-                    print("\n❌ No se pudo cargar los datos. Por favor, inténtelo de nuevo.")
-            
-            elif opcion == '9':
-                if any(generador.identidad.values()):
-                    archivo = generador.guardar_en_archivo()
-                    if archivo:
-                        print(f"\n✨ ¡Identidad guardada exitosamente en formato {'JSON' if archivo.endswith('.json') else 'TXT'}!")
-                else:
-                    print("\n❌ No hay datos para guardar. Genere algunos datos primero.")
-            
-            elif opcion == '10':
-                print("\n¡Gracias por usar el Generador de Identidades Simuladas!")
-                print("Versión: 2.0")
-                print("Desarrollado por: @hex686f6c61")
-                print("GitHub: https://github.com/686f6c61")
-                print("Hasta pronto.")
+            if opcion == '13':
+                print("\n👋 ¡Gracias por usar el generador de identidades!")
                 break
+                
+            if opcion not in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']:
+                print("\n❌ Opción no válida")
+                input("\nPresione Enter para continuar...")
+                os.system('cls' if os.name == 'nt' else 'clear')
+                continue
             
-            else:
-                print("\n❌ Opción no válida. Por favor, seleccione una opción del 1 al 10.")
-            
-            input("\nPresione Enter para continuar...")
-    
+            try:
+                if opcion == '1':
+                    indicaciones = input("Indique preferencias (o presione Enter para ninguna): ")
+                    generador.generar_datos_personales(indicaciones)
+                elif opcion == '2':
+                    indicaciones = input("Indique preferencias (o presione Enter para ninguna): ")
+                    generador.generar_historia_familiar(indicaciones)
+                elif opcion == '3':
+                    indicaciones = input("Indique preferencias (o presione Enter para ninguna): ")
+                    generador.generar_historial_educativo(indicaciones)
+                elif opcion == '4':
+                    indicaciones = input("Indique preferencias (o presione Enter para ninguna): ")
+                    generador.generar_experiencia_laboral(indicaciones)
+                elif opcion == '5':
+                    indicaciones = input("Indique preferencias (o presione Enter para ninguna): ")
+                    generador.generar_perfil_social(indicaciones)
+                elif opcion == '6':
+                    indicaciones = input("Indique preferencias (o presione Enter para ninguna): ")
+                    generador.generar_perfil_psicologico(indicaciones)
+                elif opcion == '7':
+                    indicaciones = input("Indique preferencias (o presione Enter para ninguna): ")
+                    generador.generar_otros_datos(indicaciones)
+                elif opcion == '8':
+                    print("\n=== GENERACIÓN DE IDENTIDAD COMPLETA ===")
+                    print("1. Generar nueva identidad")
+                    print("2. Cargar perfil existente")
+                    sub_opcion = input("\nSeleccione una opción (1-2): ")
+                    if sub_opcion == '1':
+                        con_indicaciones = input("\n¿Desea proporcionar indicaciones para cada parte? (s/n): ").lower() == 's'
+                        generador.generar_identidad_completa(con_indicaciones)
+                    elif sub_opcion == '2':
+                        perfiles = generador.listar_perfiles_guardados()
+                        if perfiles:
+                            print("\nPerfiles disponibles:")
+                            for i, perfil in enumerate(perfiles, 1):
+                                print(f"{i}. {perfil}")
+                            seleccion = input("\nSeleccione el número del perfil a usar: ")
+                    else:
+                        print("\n❌ Opción no válida")
+                elif opcion == '9':
+                    if not generador.identidad.get('datos_personales'):
+                        print("\n❌ Primero debes generar los datos personales")
+                        continue
+                    foto_generator = GeneradorFotos()
+                    foto_generator.generar_foto(generador.identidad['datos_personales'])
+                elif opcion == '10':
+                    if not any(generador.identidad.values()):
+                        print("\n❌ No hay datos para guardar")
+                        continue
+                    generador.guardar_en_archivo()
+                elif opcion == '11':
+                    try:
+                        print("\n=== GENERACIÓN DE STORYTELLING NARRATIVO ===")
+                        print("1. Usar perfil actual")
+                        print("2. Cargar perfil desde archivo JSON")
+                        
+                        sub_opcion = input("\nSeleccione una opción (1-2): ").strip()
+                        
+                        if sub_opcion == '1':
+                            if not any(generador.identidad.values()):
+                                print("\n❌ No hay datos en el perfil actual para generar storytelling")
+                                continue
+                            datos_perfil = generador.identidad
+                            nombre_base = datos_perfil.get('datos_personales', {}).get('nombre_completo', 'perfil')
+                        
+                        elif sub_opcion == '2':
+                            # Listar archivos JSON disponibles
+                            if not os.path.exists('perfiles'):
+                                print("\n❌ No existe la carpeta 'perfiles'")
+                                continue
+                                
+                            archivos_json = [f for f in os.listdir('perfiles') if f.endswith('.json')]
+                            if not archivos_json:
+                                print("\n❌ No hay archivos JSON disponibles")
+                                continue
+                                
+                            print("\nPerfiles disponibles:")
+                            for i, archivo in enumerate(archivos_json, 1):
+                                print(f"{i}. {archivo}")
+                                
+                            seleccion = input("\nSeleccione el número del perfil (0 para cancelar): ")
+                            if seleccion == "0":
+                                continue
+                                
+                            try:
+                                indice = int(seleccion) - 1
+                                if 0 <= indice < len(archivos_json):
+                                    ruta_json = os.path.join('perfiles', archivos_json[indice])
+                                    with open(ruta_json, 'r', encoding='utf-8') as f:
+                                        datos_perfil = json.load(f)
+                                        nombre_base = datos_perfil.get('datos_personales', {}).get('nombre_completo', 'perfil')
+                                else:
+                                    print("\n❌ Selección no válida")
+                                    continue
+                            except (ValueError, IndexError):
+                                print("\n❌ Selección no válida")
+                                continue
+                        else:
+                            print("\n❌ Opción no válida")
+                            continue
+                        
+                        # Generar storytelling con el perfil seleccionado
+                        historia = storytelling.generar_storytelling_completo(datos_perfil)
+                        
+                        if historia:
+                            # Asegurar que existe el directorio de historias
+                            os.makedirs('historias', exist_ok=True)
+                            
+                            # Generar nombre de archivo con fecha y hora
+                            fecha = datetime.now().strftime("%Y%m%d_%H%M%S")
+                            nombre_archivo = f"historias/{nombre_base}_{fecha}_storytelling.txt"
+                            
+                            # Guardar la historia
+                            try:
+                                with open(nombre_archivo, 'w', encoding='utf-8') as f:
+                                    f.write(historia)
+                                print(f"\n✅ Historia guardada exitosamente en: {nombre_archivo}")
+                            except Exception as e:
+                                print(f"\n❌ Error al guardar la historia: {e}")
+                        else:
+                            print("\n❌ No se pudo generar la historia")
+                            
+                    except Exception as e:
+                        print(f"\n❌ Error al generar storytelling: {e}")
+                elif opcion == '12':
+                    try:
+                        print("\n=== GENERACIÓN DE VISTA HTML ===")
+                        
+                        # 1. Seleccionar archivo JSON
+                        print("\nSeleccione el archivo JSON del perfil:")
+                        if not os.path.exists('perfiles'):
+                            print("❌ No existe la carpeta 'perfiles'")
+                            continue
+                            
+                        archivos_json = [f for f in os.listdir('perfiles') if f.endswith('.json')]
+                        if not archivos_json:
+                            print("❌ No hay archivos JSON disponibles")
+                            continue
+                            
+                        for i, archivo in enumerate(archivos_json, 1):
+                            print(f"{i}. {archivo}")
+                            
+                        seleccion = input("\nSeleccione el número del perfil (0 para cancelar): ")
+                        if seleccion == "0":
+                            continue
+                            
+                        try:
+                            indice = int(seleccion) - 1
+                            if 0 <= indice < len(archivos_json):
+                                ruta_json = os.path.join('perfiles', archivos_json[indice])
+                                with open(ruta_json, 'r', encoding='utf-8') as f:
+                                    perfil = json.load(f)
+                            else:
+                                print("❌ Selección no válida")
+                                continue
+                        except (ValueError, IndexError):
+                            print("❌ Selección no válida")
+                            continue
+                        
+                        # 2. Preguntar por la foto
+                        usar_foto = input("\n¿Desea incluir una fotografía? (s/n): ").lower() == 's'
+                        ruta_foto = None
+                        
+                        if usar_foto:
+                            print("\nSeleccione la foto a utilizar:")
+                            if not os.path.exists('fotos'):
+                                print("❌ No existe la carpeta 'fotos'")
+                                continue
+                                
+                            fotos = [f for f in os.listdir('fotos') if f.endswith(('.jpg', '.png', '.jpeg'))]
+                            if not fotos:
+                                print("❌ No hay fotos disponibles")
+                                continue
+                                
+                            for i, foto in enumerate(fotos, 1):
+                                print(f"{i}. {foto}")
+                                
+                            seleccion_foto = input("\nSeleccione el número de la foto (0 para cancelar): ")
+                            if seleccion_foto == "0":
+                                continue
+                                
+                            try:
+                                indice_foto = int(seleccion_foto) - 1
+                                if 0 <= indice_foto < len(fotos):
+                                    ruta_foto = os.path.join('fotos', fotos[indice_foto])
+                                else:
+                                    print("❌ Selección no válida")
+                                    continue
+                            except (ValueError, IndexError):
+                                print("❌ Selección no válida")
+                                continue
+                        
+                        # 3. Generar HTML
+                        html_generator = GeneradorHTML()
+                        ruta_html = html_generator.generar_html(perfil, ruta_foto if usar_foto else None)
+                        
+                        if ruta_html:
+                            print(f"\n✅ Vista HTML generada exitosamente en: {ruta_html}")
+                        else:
+                            print("\n❌ Error al generar la vista HTML")
+                            
+                    except Exception as e:
+                        print(f"\n❌ Error al generar vista HTML: {e}")
+                
+                input("\nPresione Enter para continuar...")
+                os.system('cls' if os.name == 'nt' else 'clear')
+                
+            except Exception as e:
+                print(f"\n❌ Error: {e}")
+                input("\nPresione Enter para continuar...")
+                os.system('cls' if os.name == 'nt' else 'clear')
+                
     except KeyboardInterrupt:
-        print("\n\nInterrupción detectada. Saliendo del programa...")
+        print("\n\n👋 ¡Hasta pronto!")
     except Exception as e:
-        print(f"\n❌ Se ha producido un error inesperado: {e}")
-    finally:
-        print("\n¡Gracias por usar el Generador de Identidades Simuladas!")
-        print("Versión: 2.0")
-        print("Desarrollado por: @hex686f6c61")
-        print("GitHub: https://github.com/686f6c61")
-        print("Hasta pronto.")
+        print(f"\n❌ Error fatal: {e}")
+        input("\nPresione Enter para salir...")
 
 if __name__ == "__main__":
     main()
+

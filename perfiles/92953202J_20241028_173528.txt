@@ -1,0 +1,669 @@
+=== IDENTIDAD SIMULADA ===
+
+
+=== DATOS PERSONALES ===
+Nombre_completo:
+  Lucía Martínez Sánchez
+Sexo:
+  Mujer
+Edad:
+  34
+Dni:
+  92953202J
+Direccion:
+  Calle Toledo 23, 4º B, 28005 Madrid
+Datos_biometricos:
+  Altura:
+    168 cm
+  Peso:
+    62 kg
+  Color_ojos:
+    Verde
+  Color_pelo:
+    Castaño oscuro
+  Constitucion:
+    Atlética
+  Marcas_visibles:
+    Pequeña cicatriz en la barbilla
+
+=== HISTORIA FAMILIAR ===
+Padres:
+  Padre:
+    Nombre:
+      Antonio Martínez García
+    Edad:
+      65
+    Profesion:
+      Arquitecto jubilado
+  Madre:
+    Nombre:
+      Carmen Sánchez Ruiz
+    Edad:
+      62
+    Profesion:
+      Profesora de instituto
+Hermanos:
+  Nombre:
+    David Martínez Sánchez
+  Edad:
+    38
+  Profesion:
+    Médico
+
+Abuelos:
+  Paternos:
+    Abuelo:
+      Manuel Martínez López (fallecido)
+    Abuela:
+      Ana García Fernández (fallecida)
+    Profesiones:
+      Comerciante y ama de casa
+  Maternos:
+    Abuelo:
+      José Sánchez Moreno (89 años)
+    Abuela:
+      María Ruiz Torres (86 años)
+    Profesiones:
+      Agricultor jubilado y maestra jubilada
+Eventos_importantes:
+  - 1989 - Nacimiento de su hermano David
+  - 1992 - Mudanza familiar a Madrid desde Valencia
+  - 1995 - Fallecimiento de la abuela paterna
+  - 1998 - Primera comunión de Lucía
+  - 2000 - Viaje familiar a Disney París
+  - 2003 - Graduación de bachillerato con honores
+  - 2007 - Graduación universitaria en Derecho
+  - 2009 - Fallecimiento del abuelo paterno
+  - 2012 - Boda de su hermano David
+  - 2014 - Nacimiento de su primer sobrino
+  - 2016 - 25º aniversario de boda de sus padres
+  - 2018 - Ascenso laboral importante
+  - 2019 - Conoce a su actual pareja Elena
+  - 2020 - Compra su primer piso en Madrid
+  - 2022 - Viaje familiar a Nueva York
+Amigos:
+  Nombre_apellidos:
+    Sara Gómez Pérez
+  Estudios:
+    Economía
+  Ciudad_residencia:
+    Madrid
+  Trabajo_actual:
+    Consultora financiera
+  Situacion_sentimental:
+    Casada
+  Pareja:
+    Carlos Ruiz
+
+  Nombre_apellidos:
+    Miguel Ángel Torres López
+  Estudios:
+    Ingeniería Informática
+  Ciudad_residencia:
+    Barcelona
+  Trabajo_actual:
+    Desarrollador senior
+  Situacion_sentimental:
+    Soltero
+  Pareja:
+    
+
+  Nombre_apellidos:
+    Laura Fernández Castro
+  Estudios:
+    Psicología
+  Ciudad_residencia:
+    Madrid
+  Trabajo_actual:
+    Psicóloga clínica
+  Situacion_sentimental:
+    Divorciada
+  Pareja:
+    
+
+  Nombre_apellidos:
+    Pablo Herrera Martín
+  Estudios:
+    Derecho
+  Ciudad_residencia:
+    Valencia
+  Trabajo_actual:
+    Abogado
+  Situacion_sentimental:
+    Casado
+  Pareja:
+    Ana Belén Sanz
+
+  Nombre_apellidos:
+    Carmen Díaz Moreno
+  Estudios:
+    Marketing
+  Ciudad_residencia:
+    Madrid
+  Trabajo_actual:
+    Directora de marketing
+  Situacion_sentimental:
+    En pareja
+  Pareja:
+    Luis Romero
+
+  Nombre_apellidos:
+    Jorge Navarro Gil
+  Estudios:
+    Arquitectura
+  Ciudad_residencia:
+    Sevilla
+  Trabajo_actual:
+    Arquitecto
+  Situacion_sentimental:
+    Soltero
+  Pareja:
+    
+
+Situacion_sentimental:
+  En pareja con Elena Rodríguez Vega
+
+=== EDUCACION ===
+Primaria:
+  Centro:
+    Colegio Público Miguel de Cervantes
+  Periodo:
+    1995-2001
+  Ubicacion:
+    Madrid
+Secundaria:
+  Centro:
+    IES San Isidro
+  Periodo:
+    2001-2007
+  Especialidad:
+    Bachillerato de Ciencias de la Salud
+Universidad:
+  Centro:
+    Universidad Complutense de Madrid
+  Carrera:
+    Grado en Fisioterapia
+  Periodo:
+    2007-2011
+  Notas_destacadas:
+    Matrícula de honor en Biomecánica y Premio Extraordinario de Fin de Carrera
+Otros_cursos:
+  Nombre:
+    Especialización en Fisioterapia Deportiva
+  Centro:
+    Real Federación Española de Atletismo
+  Duracion:
+    300 horas
+  Año:
+    2012
+
+  Nombre:
+    Certificación en Técnicas de Punción Seca
+  Centro:
+    Instituto de Terapias Manuales
+  Duracion:
+    150 horas
+  Año:
+    2014
+
+  Nombre:
+    Experto en Rehabilitación Neurológica
+  Centro:
+    Hospital La Paz
+  Duracion:
+    400 horas
+  Año:
+    2016
+
+
+=== EXPERIENCIA ===
+Trabajos:
+  Empresa:
+    Centro Deportivo de Alto Rendimiento (CAR)
+  Cargo:
+    Fisioterapeuta Deportiva Senior
+  Periodo:
+    2018-Presente
+  Responsabilidades:
+    - Tratamiento y rehabilitación de deportistas de élite
+    - Coordinación del equipo de fisioterapia deportiva
+    - Desarrollo de programas de prevención de lesiones
+    - Evaluación biomecánica de atletas
+  Logros:
+    - Reducción del 40% en el tiempo de recuperación de lesiones musculares
+    - Implementación de un nuevo protocolo de prevención que redujo lesiones en un 25%
+    - Reconocimiento como mejor departamento de fisioterapia deportiva 2021
+
+  Empresa:
+    Hospital Universitario La Paz
+  Cargo:
+    Fisioterapeuta de Rehabilitación Neurológica
+  Periodo:
+    2016-2018
+  Responsabilidades:
+    - Tratamiento de pacientes con lesiones neurológicas
+    - Desarrollo de planes de rehabilitación personalizados
+    - Coordinación con equipo multidisciplinar
+    - Seguimiento de evolución de pacientes
+  Logros:
+    - Desarrollo de un nuevo protocolo de rehabilitación post-ictus
+    - Participación en estudio clínico sobre rehabilitación en esclerosis múltiple
+    - Mejora del 35% en índices de recuperación funcional de pacientes
+
+  Empresa:
+    Clínica Fisiosalud Madrid
+  Cargo:
+    Fisioterapeuta
+  Periodo:
+    2011-2016
+  Responsabilidades:
+    - Tratamiento de pacientes ambulatorios
+    - Aplicación de técnicas de terapia manual
+    - Rehabilitación post-quirúrgica
+    - Atención a deportistas amateur
+  Logros:
+    - Incremento del 50% en la cartera de pacientes
+    - Implementación de nuevas técnicas de punción seca
+    - Desarrollo del programa de rehabilitación deportiva
+
+Habilidades:
+  - Terapia manual avanzada
+  - Punción seca
+  - Rehabilitación neurológica
+  - Biomecánica deportiva
+  - Vendaje neuromuscular
+  - Gestión de equipos
+  - Evaluación funcional
+  - Técnicas de movilización
+Sectores_experiencia:
+  - Fisioterapia deportiva
+  - Rehabilitación neurológica
+  - Medicina deportiva
+  - Salud pública
+  - Clínica privada
+
+=== PERFIL PSICOLOGICO ===
+Rasgos_principales:
+  Extraversion:
+    Puntuacion:
+      7
+    Ejemplos:
+      - Mantiene una amplia red de amigos y contactos profesionales
+      - Disfruta organizando reuniones sociales en casa
+      - Se adapta fácilmente a nuevos entornos como demuestra su trayectoria profesional
+  Apertura:
+    Puntuacion:
+      8
+    Ejemplos:
+      - Constante búsqueda de formación y especialización en su campo
+      - Viajes frecuentes a distintos destinos culturales
+      - Disposición a probar nuevas experiencias culinarias y culturales
+  Responsabilidad:
+    Puntuacion:
+      9
+    Ejemplos:
+      - Trayectoria académica excepcional con premio extraordinario
+      - Progresión profesional constante con logros medibles
+      - Mantiene una rutina estructurada combinando trabajo y vida personal
+  Amabilidad:
+    Puntuacion:
+      8
+    Ejemplos:
+      - Dedicación a ayudar a otros en su profesión
+      - Mantiene relaciones duraderas con amigos de diferentes etapas
+      - Participación activa en eventos familiares y celebraciones
+  Estabilidad:
+    Puntuacion:
+      7
+    Ejemplos:
+      - Manejo efectivo del estrés en situaciones laborales exigentes
+      - Capacidad para mantener relaciones estables personales y profesionales
+      - Toma de decisiones meditada y progresiva en su carrera
+Fortalezas:
+  - Alta capacidad de organización y planificación
+  - Empatía y habilidades interpersonales
+  - Compromiso con el desarrollo profesional continuo
+  - Resiliencia ante los desafíos
+  - Capacidad de liderazgo
+Areas_mejora:
+  - Tendencia al perfeccionismo excesivo
+  - Dificultad para desconectar del trabajo
+  - Ocasional sobrecarga de responsabilidades
+  - Impaciencia ante procesos lentos
+  - Tendencia a postergar el autocuidado
+Estilo_comunicacion:
+  Descripcion:
+    Comunicación asertiva y profesional, con un toque cercano y empático. Utiliza lenguaje técnico cuando es necesario pero sabe adaptarlo al interlocutor.
+  Muletillas:
+    - En realidad...
+    - Desde mi punto de vista profesional...
+    - Lo que quiero decir es...
+    - ¿Sabes a qué me refiero?
+    - Básicamente...
+Valores:
+  - Excelencia profesional
+  - Aprendizaje continuo
+  - Equilibrio vida-trabajo
+  - Compromiso con el bienestar de otros
+  - Integridad
+Formas_de_actuar:
+  - Planifica detalladamente su semana laboral
+  - Mantiene un diario de desarrollo profesional
+  - Practica deporte regularmente como forma de autocuidado
+  - Dedica tiempo a mentorizar a colegas más jóvenes
+  - Organiza cenas mensuales con amigos cercanos
+  - Prioriza la comunicación regular con su familia
+  - Busca activamente feedback de sus pacientes
+  - Participa en conferencias y seminarios de su campo
+  - Mantiene rutinas matutinas estrictas
+  - Dedica tiempo a actividades culturales los fines de semana
+Iq:
+  128
+Frase_motivacional:
+  El éxito no es el final, el fracaso no es fatal: es el coraje para continuar lo que cuenta
+
+=== PERFIL PAREJA ===
+Nombre_apellidos:
+  Carlos Ruiz Fernández
+Edad:
+  36
+Donde_se_conocieron:
+  En un grupo de senderismo en la Sierra de Guadarrama
+Estudios:
+  Ingeniería Industrial por la Universidad Politécnica de Madrid
+Trabajo_actual:
+  Project Manager en una empresa de energías renovables
+Conduce:
+  True
+Coche:
+  Tiene:
+    True
+  Marca:
+    Volvo XC40
+Moto:
+  Tiene:
+    False
+  Marca:
+    
+Hijos:
+  Nombre:
+    Daniel
+  Edad:
+    4
+  Donde_estudia:
+    Escuela Infantil Los Girasoles
+
+Manias:
+  - Organizar el armario por colores
+  - Revisar tres veces que ha cerrado la puerta
+  - Tomar el café siempre en la misma taza
+Cosas_que_gustan:
+  - Su dedicación a la familia
+  - Su pasión por el deporte y la vida sana
+  - Su capacidad de escucha
+Cosas_que_detesta:
+  - Que deje la ropa sucia fuera del cesto
+  - Su obsesión por el trabajo
+  - Que sea demasiado perfeccionista
+
+=== OTROS DATOS ===
+Mascota:
+  Tiene:
+    True
+  Raza:
+    Gato Siamés
+  Nombre:
+    Luna
+  Edad:
+    3
+Conduccion:
+  Coche:
+    Conduce:
+      True
+    Marca:
+      Volkswagen
+    Modelo:
+      Golf
+    Anos:
+      5
+    Edad_carnet:
+      18
+  Moto:
+    Conduce:
+      False
+    Marca:
+      
+    Anos:
+      0
+    Cilindrada:
+      
+    Ano_carnet:
+      0
+Ultima_lesion:
+  Esguince de tobillo hace 6 meses practicando running
+Hobbies:
+  Nombre:
+    Running
+  Descripcion:
+    Practica running 3 veces por semana, participa en carreras populares de 10km
+
+  Nombre:
+    Fotografía
+  Descripcion:
+    Aficionada a la fotografía de paisajes urbanos, especialmente arquitectura
+
+  Nombre:
+    Jardinería
+  Descripcion:
+    Mantiene un pequeño huerto urbano en su terraza con hierbas aromáticas y hortalizas
+
+Color_favorito:
+  Azul marino
+Estilo_vestimenta:
+  Casual chic
+Prenda_favorita:
+  Blazer negro
+Talla_zapatos:
+  38
+Talla_ropa:
+  M
+
+=== PERFIL SOCIAL ===
+Viajes:
+  Viajes_espana:
+    Lugar:
+      San Sebastián
+    Fecha:
+      15 agosto 2023
+    Duracion:
+      4 días
+    Motivo:
+      Escapada gastronómica
+    Acompanantes:
+      Dos amigas del gimnasio
+    Anecdotas:
+      Anecdota:
+        Mientras disfrutábamos de un pintxo de tortilla en el Bar Nestor, famoso por su tortilla, nos enteramos de que solo hacen dos tortillas al día. Llegamos justo a tiempo para conseguir el último trozo del día, ¡fue una carrera contra reloj que añadió emoción inesperada a nuestro viaje gastronómico!
+
+      Anecdota:
+        En nuestra búsqueda de la mejor sidra, acabamos en una sidrería tradicional en las afueras de San Sebastián, donde accidentalmente iniciamos una competencia de quién podía escanciar la sidra desde más alto sin derramarla. Nuestros torpes intentos hicieron reír a los locales, que terminaron dándonos una lección improvisada.
+
+      Anecdota:
+        Decidimos subir al Monte Igueldo al atardecer para disfrutar de las vistas de San Sebastián. Al llegar a la cima, nos dimos cuenta de que habíamos tomado el camino largo por error, pero la vista panorámica de la ciudad bañada por el atardecer hizo que ese 'error' fuera uno de los momentos más memorables del viaje.
+
+
+    Lugar:
+      Granada
+    Fecha:
+      12 abril 2023
+    Duracion:
+      3 días
+    Motivo:
+      Turismo cultural
+    Acompanantes:
+      Pareja
+    Anecdotas:
+      Anecdota:
+        Mientras explorábamos el Albaicín, decidimos seguir a un gato callejero esperando descubrir algún rincón secreto. Para nuestra sorpresa, nos llevó hasta un pequeño patio escondido donde un anciano tocaba flamenco en su guitarra, ofreciéndonos una experiencia única e inesperadamente íntima de la cultura local.
+
+      Anecdota:
+        En nuestra visita a la Alhambra, nos perdimos en el Laberinto de los Jardines del Generalife. Entre risas y vueltas, terminamos encontrándonos con una pareja que también estaba perdida. Juntos, compartimos historias y risas hasta que finalmente encontramos la salida, creando una inesperada amistad.
+
+      Anecdota:
+        Durante una cena en uno de los restaurantes de Plaza Nueva, pedí sin saber una 'ración' de jamón ibérico, esperando un plato moderado. Para mi sorpresa y deleite, me presentaron una montaña de jamón que compartimos entre risas con la mesa vecina, aprendiendo de paso la diferencia entre 'tapa', 'media ración' y 'ración' en la gastronomía española.
+
+
+    Lugar:
+      Formentera
+    Fecha:
+      1 julio 2023
+    Duracion:
+      5 días
+    Motivo:
+      Vacaciones de playa
+    Acompanantes:
+      Grupo de amigos
+    Anecdotas:
+      Anecdota:
+        Alquilaron una bicicleta para explorar Formentera, pero en medio del camino se encontraron con un grupo de cabras que bloqueaban el sendero. Después de un divertido intento de comunicarse con ellas, tuvieron que esperar a que las cabras decidieran moverse por su cuenta. Aquella 'conversación' con las cabras se convirtió en el tema recurrente de risas durante el viaje.
+
+      Anecdota:
+        Mientras disfrutaban de un día de playa en Ses Illetes, uno de los amigos se lanzó al agua sin recordar que llevaba las llaves del alquiler en el bolsillo. La búsqueda de las llaves en el agua cristalina se convirtió en una misión de buceo de emergencia que, afortunadamente, terminó con éxito y muchas risas.
+
+      Anecdota:
+        Decidieron probar la gastronomía local comiendo paella en un restaurante recomendado, pero confundieron el picante 'guindilla' con un pimiento regular. La reacción inesperada al picante provocó una serie de carreras hacia el mar para calmar el ardor, lo que se convirtió en un espectáculo divertido para los demás comensales y una historia inolvidable para el grupo.
+
+
+    Lugar:
+      Sierra Nevada
+    Fecha:
+      20 enero 2023
+    Duracion:
+      4 días
+    Motivo:
+      Viaje de esquí
+    Acompanantes:
+      Club deportivo
+    Anecdotas:
+      Anecdota:
+        Durante nuestro segundo día esquiando en Sierra Nevada, me confié demasiado bajando una pista azul y terminé estrellándome contra un muñeco de nieve gigante que alguien había construido cerca de la pista. No solo quedé cubierto de nieve de cabeza a pies, sino que también mi caída se convirtió en el tema de conversación del día entre el club deportivo.
+
+      Anecdota:
+        Mientras explorábamos el pueblo después de un día de esquí, accidentalmente entramos a un restaurante pensando que era el que habíamos reservado. No nos dimos cuenta del error hasta que el camarero nos trajo un plato de jamón ibérico como cortesía de la casa, algo que no se ofrecía en el lugar que habíamos elegido. Decidimos quedarnos, y resultó ser una de las mejores cenas que tuvimos.
+
+      Anecdota:
+        En nuestro último día, decidimos tomar una clase de snowboard para cambiar un poco la rutina. Yo nunca había practicado snowboarding antes, y en mi primer intento de bajar una pendiente suave, terminé deslizándome de espaldas durante casi medio minuto. Aunque fue un poco vergonzoso, me gané el apodo de 'el surfista de nieve' por el resto del viaje.
+
+
+    Lugar:
+      Santiago de Compostela
+    Fecha:
+      5 mayo 2023
+    Duracion:
+      3 días
+    Motivo:
+      Fin de semana largo
+    Acompanantes:
+      Sola
+    Anecdotas:
+      Anecdota:
+        Perdida en los callejones empedrados de Santiago, intentando encontrar el famoso Mercado de Abastos, acabé siendo guiada por un amable anciano que, además de mostrarme el camino, me contó historias de la ciudad que no aparecen en ninguna guía turística.
+
+      Anecdota:
+        Al visitar la Catedral de Santiago, coincidí con el inicio de la Misa del Peregrino. Decidí quedarme y vivir la experiencia completa; el momento del botafumeiro fue tan impresionante que me dejó con una sensación de asombro y paz interior difícil de olvidar.
+
+      Anecdota:
+        Intentando probar todas las delicias gallegas posibles, acepté el desafío de un restaurante local de comer una tapa de pulpo 'a feira' muy picante. La cara que puse al sentir el verdadero picor fue tan cómica que terminé en la foto del día del restaurante, colgada con orgullo en su entrada.
+
+
+  Viajes_internacional:
+    Lugar:
+      París
+    Pais:
+      Francia
+    Fecha:
+      23 junio 2023
+    Duracion:
+      6 días
+    Motivo:
+      Vacaciones de verano
+    Acompanantes:
+      Pareja
+    Anecdotas:
+      Anecdota:
+        Mientras intentábamos hacernos un selfie con la Torre Eiffel de fondo, un grupo de turistas se acercó para ayudarnos y terminaron invitándonos a un picnic improvisado justo al pie de la torre. Compartimos risas, queso y vino bajo las luces de París, convirtiendo un simple momento en un recuerdo inolvidable.
+
+      Anecdota:
+        En nuestro tercer día, decidimos explorar Montmartre y nos perdimos en sus encantadoras callecitas. Sin querer, dimos con una pequeña panadería escondida que tenía los mejores croissants que hemos probado. El panadero, al ver nuestro entusiasmo, nos regaló un par de dulces extras y nos enseñó algunas palabras en francés.
+
+      Anecdota:
+        Al visitar el Museo del Louvre, estábamos tan absortos admirando la Mona Lisa que no nos dimos cuenta de la hora de cierre. Nos encontramos siendo gentilmente escoltados fuera por un guardia, quien compartió con nosotros historias sobre las travesuras nocturnas de los gatos del Louvre. Terminó siendo una despedida única de uno de los museos más famosos del mundo.
+
+
+    Lugar:
+      Copenhague
+    Pais:
+      Dinamarca
+    Fecha:
+      10 octubre 2023
+    Duracion:
+      4 días
+    Motivo:
+      Congreso de trabajo
+    Acompanantes:
+      Compañeros de trabajo
+    Anecdotas:
+      Anecdota:
+        Mientras paseábamos por Nyhavn, decidimos tomar una foto grupal con los coloridos edificios de fondo. Justo cuando íbamos a tomar la foto, un grupo de ciclistas pasó detrás de nosotros, riendo y saludando, apareciendo todos en nuestra foto. Fue un recordatorio perfecto de la amigable cultura ciclista de Copenhague.
+
+      Anecdota:
+        En nuestro último día, intentamos probar el famoso Smørrebrød en un restaurante local. Sin embargo, confundí los nombres y accidentalmente pedí una versión con arenque, un ingrediente que nunca había probado. Resultó ser delicioso, convirtiéndose en mi comida favorita del viaje y una historia divertida sobre cómo mis papilas gustativas se aventuraron más allá de lo esperado en Dinamarca.
+
+      Anecdota:
+        Durante una visita al Parque de Tivoli, decidimos subirnos a una de las montañas rusas más antiguas. Justo en el pico más alto, el carro se detuvo momentáneamente, brindándonos una vista inesperada pero impresionante de la ciudad iluminada. Fue un momento de temor y maravilla que ninguno de nosotros olvidará, una mezcla de adrenalina y belleza icónica de Copenhague.
+
+
+Social:
+  Estilo_alimentacion:
+    Flexitariana con tendencia a dieta mediterránea
+  Platos_favoritos:
+    Nombre:
+      Bowl de quinoa y verduras asadas
+    Receta:
+      Quinoa cocida, calabacín, berenjena y pimientos asados, garbanzos especiados, aguacate, semillas de calabaza y aliño de tahini con limón
+    Ocasion:
+      Almuerzos entre semana post-entrenamiento
+
+    Nombre:
+      Paella de mariscos
+    Receta:
+      Arroz bomba, mejillones, gambas, calamares, pimiento rojo, guisantes, azafrán, caldo de pescado y sofrito tradicional
+    Ocasion:
+      Comidas familiares de domingo
+
+  Ultimas_reuniones:
+    Fecha:
+      15/10/2023
+    Menu:
+      Tabla de quesos y embutidos, ensalada de burrata, lasaña vegetariana, tiramisú casero
+    Invitados:
+      - Carmen López
+      - David Torres
+      - Ana Ruiz
+      - Pablo García
+    Musica:
+      - Jazz contemporáneo
+      - Bossa Nova
+
+    Fecha:
+      28/09/2023
+    Menu:
+      Gazpacho andaluz, brochetas de pollo al limón, ensalada de quinoa, tarta de zanahoria
+    Invitados:
+      - María Pérez
+      - Jorge Sanz
+      - Laura Costa
+    Musica:
+      - Pop español
+      - Indie rock
+

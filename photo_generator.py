@@ -19,8 +19,7 @@ class GeneradorFotos:
         self.angulo_descripcion = ""
         
     def configurar_api(self):
-        """Configura y valida la API key de Stability AI
-        Solicita la key si no está configurada y la valida antes de guardarla"""
+        """Configura y valida la API key de Stability AI silenciosamente"""
         load_dotenv()
         self.api_key = os.getenv('STABILITY_API_KEY')
         
@@ -29,7 +28,7 @@ class GeneradorFotos:
             print("\n=== CONFIGURACIÓN DE API DE STABILITY AI ===")
             self.api_key = input("Por favor, introduce tu API key de Stability AI (comienza con 'sk-'): ")
             
-            # Validación b��sica y guardado de la API key
+            # Validación básica y guardado de la API key
             if self.api_key.startswith('sk-'):
                 with open('.env', 'a') as f:
                     f.write(f"\nSTABILITY_API_KEY={self.api_key}")
@@ -37,10 +36,10 @@ class GeneradorFotos:
                 print("❌ API key no válida. Debe comenzar con 'sk-'")
                 self.api_key = None
 
-        # Validación completa de la API key
+        # Validación silenciosa de la API key
         try:
             self.validar_api_key()
-            print("✅ API key de Stability AI configurada correctamente")
+            # Eliminado el mensaje de éxito aquí
         except Exception as e:
             print(f"❌ Error al validar la API key: {e}")
             self.api_key = None
@@ -244,15 +243,18 @@ class GeneradorFotos:
         return None
 
     def guardar_foto(self, imagen_bytes, datos_personales):
-        """Guarda la foto generada en el sistema de archivos
-        Crea un nombre único basado en el nombre y la fecha"""
+        """Guarda la foto generada usando el DNI como identificador"""
         if not os.path.exists('fotos'):
             os.makedirs('fotos')
             
-        # Usar nombre y fecha como identificador
-        nombre = datos_personales.get('nombre_completo', 'perfil').replace(' ', '_').lower()
+        # Usar DNI como identificador principal
+        dni = datos_personales.get('dni', '')
+        if not dni:
+            print("❌ Error: No se encontró el DNI en los datos personales")
+            return None
+        
         fecha = datetime.now().strftime("%Y%m%d_%H%M%S")
-        nombre_archivo = f"fotos/{nombre}_{fecha}.jpeg"  # Cambiado a .jpeg
+        nombre_archivo = f"fotos/{dni}_{fecha}.jpeg"
         
         try:
             with open(nombre_archivo, 'wb') as file:
@@ -317,3 +319,4 @@ if __name__ == "__main__":
     prompt = generador.generar_foto(datos_prueba)
     print("\nPrompt generado:")
     print(prompt)
+

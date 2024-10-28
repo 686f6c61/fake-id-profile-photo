@@ -1,0 +1,577 @@
+{
+  "datos_personales": {
+    "nombre_completo": "Lucía Martínez Sánchez",
+    "sexo": "Mujer",
+    "edad": 34,
+    "dni": "92953202J",
+    "direccion": "Calle Toledo 23, 4º B, 28005 Madrid",
+    "datos_biometricos": {
+      "altura": "168 cm",
+      "peso": "62 kg",
+      "color_ojos": "Verde",
+      "color_pelo": "Castaño oscuro",
+      "constitucion": "Atlética",
+      "marcas_visibles": "Pequeña cicatriz en la barbilla"
+    }
+  },
+  "historia_familiar": {
+    "padres": {
+      "padre": {
+        "nombre": "Antonio Martínez García",
+        "edad": 65,
+        "profesion": "Arquitecto jubilado"
+      },
+      "madre": {
+        "nombre": "Carmen Sánchez Ruiz",
+        "edad": 62,
+        "profesion": "Profesora de instituto"
+      }
+    },
+    "hermanos": [
+      {
+        "nombre": "David Martínez Sánchez",
+        "edad": 38,
+        "profesion": "Médico"
+      }
+    ],
+    "abuelos": {
+      "paternos": {
+        "abuelo": "Manuel Martínez López (fallecido)",
+        "abuela": "Ana García Fernández (fallecida)",
+        "profesiones": "Comerciante y ama de casa"
+      },
+      "maternos": {
+        "abuelo": "José Sánchez Moreno (89 años)",
+        "abuela": "María Ruiz Torres (86 años)",
+        "profesiones": "Agricultor jubilado y maestra jubilada"
+      }
+    },
+    "eventos_importantes": [
+      "1989 - Nacimiento de su hermano David",
+      "1992 - Mudanza familiar a Madrid desde Valencia",
+      "1995 - Fallecimiento de la abuela paterna",
+      "1998 - Primera comunión de Lucía",
+      "2000 - Viaje familiar a Disney París",
+      "2003 - Graduación de bachillerato con honores",
+      "2007 - Graduación universitaria en Derecho",
+      "2009 - Fallecimiento del abuelo paterno",
+      "2012 - Boda de su hermano David",
+      "2014 - Nacimiento de su primer sobrino",
+      "2016 - 25º aniversario de boda de sus padres",
+      "2018 - Ascenso laboral importante",
+      "2019 - Conoce a su actual pareja Elena",
+      "2020 - Compra su primer piso en Madrid",
+      "2022 - Viaje familiar a Nueva York"
+    ],
+    "amigos": [
+      {
+        "nombre_apellidos": "Sara Gómez Pérez",
+        "estudios": "Economía",
+        "ciudad_residencia": "Madrid",
+        "trabajo_actual": "Consultora financiera",
+        "situacion_sentimental": "Casada",
+        "pareja": "Carlos Ruiz"
+      },
+      {
+        "nombre_apellidos": "Miguel Ángel Torres López",
+        "estudios": "Ingeniería Informática",
+        "ciudad_residencia": "Barcelona",
+        "trabajo_actual": "Desarrollador senior",
+        "situacion_sentimental": "Soltero",
+        "pareja": ""
+      },
+      {
+        "nombre_apellidos": "Laura Fernández Castro",
+        "estudios": "Psicología",
+        "ciudad_residencia": "Madrid",
+        "trabajo_actual": "Psicóloga clínica",
+        "situacion_sentimental": "Divorciada",
+        "pareja": ""
+      },
+      {
+        "nombre_apellidos": "Pablo Herrera Martín",
+        "estudios": "Derecho",
+        "ciudad_residencia": "Valencia",
+        "trabajo_actual": "Abogado",
+        "situacion_sentimental": "Casado",
+        "pareja": "Ana Belén Sanz"
+      },
+      {
+        "nombre_apellidos": "Carmen Díaz Moreno",
+        "estudios": "Marketing",
+        "ciudad_residencia": "Madrid",
+        "trabajo_actual": "Directora de marketing",
+        "situacion_sentimental": "En pareja",
+        "pareja": "Luis Romero"
+      },
+      {
+        "nombre_apellidos": "Jorge Navarro Gil",
+        "estudios": "Arquitectura",
+        "ciudad_residencia": "Sevilla",
+        "trabajo_actual": "Arquitecto",
+        "situacion_sentimental": "Soltero",
+        "pareja": ""
+      }
+    ],
+    "situacion_sentimental": "En pareja con Elena Rodríguez Vega"
+  },
+  "educacion": {
+    "primaria": {
+      "centro": "Colegio Público Miguel de Cervantes",
+      "periodo": "1995-2001",
+      "ubicacion": "Madrid"
+    },
+    "secundaria": {
+      "centro": "IES San Isidro",
+      "periodo": "2001-2007",
+      "especialidad": "Bachillerato de Ciencias de la Salud"
+    },
+    "universidad": {
+      "centro": "Universidad Complutense de Madrid",
+      "carrera": "Grado en Fisioterapia",
+      "periodo": "2007-2011",
+      "notas_destacadas": "Matrícula de honor en Biomecánica y Premio Extraordinario de Fin de Carrera"
+    },
+    "otros_cursos": [
+      {
+        "nombre": "Especialización en Fisioterapia Deportiva",
+        "centro": "Real Federación Española de Atletismo",
+        "duracion": "300 horas",
+        "año": "2012"
+      },
+      {
+        "nombre": "Certificación en Técnicas de Punción Seca",
+        "centro": "Instituto de Terapias Manuales",
+        "duracion": "150 horas",
+        "año": "2014"
+      },
+      {
+        "nombre": "Experto en Rehabilitación Neurológica",
+        "centro": "Hospital La Paz",
+        "duracion": "400 horas",
+        "año": "2016"
+      }
+    ]
+  },
+  "experiencia": {
+    "trabajos": [
+      {
+        "empresa": "Centro Deportivo de Alto Rendimiento (CAR)",
+        "cargo": "Fisioterapeuta Deportiva Senior",
+        "periodo": "2018-Presente",
+        "responsabilidades": [
+          "Tratamiento y rehabilitación de deportistas de élite",
+          "Coordinación del equipo de fisioterapia deportiva",
+          "Desarrollo de programas de prevención de lesiones",
+          "Evaluación biomecánica de atletas"
+        ],
+        "logros": [
+          "Reducción del 40% en el tiempo de recuperación de lesiones musculares",
+          "Implementación de un nuevo protocolo de prevención que redujo lesiones en un 25%",
+          "Reconocimiento como mejor departamento de fisioterapia deportiva 2021"
+        ]
+      },
+      {
+        "empresa": "Hospital Universitario La Paz",
+        "cargo": "Fisioterapeuta de Rehabilitación Neurológica",
+        "periodo": "2016-2018",
+        "responsabilidades": [
+          "Tratamiento de pacientes con lesiones neurológicas",
+          "Desarrollo de planes de rehabilitación personalizados",
+          "Coordinación con equipo multidisciplinar",
+          "Seguimiento de evolución de pacientes"
+        ],
+        "logros": [
+          "Desarrollo de un nuevo protocolo de rehabilitación post-ictus",
+          "Participación en estudio clínico sobre rehabilitación en esclerosis múltiple",
+          "Mejora del 35% en índices de recuperación funcional de pacientes"
+        ]
+      },
+      {
+        "empresa": "Clínica Fisiosalud Madrid",
+        "cargo": "Fisioterapeuta",
+        "periodo": "2011-2016",
+        "responsabilidades": [
+          "Tratamiento de pacientes ambulatorios",
+          "Aplicación de técnicas de terapia manual",
+          "Rehabilitación post-quirúrgica",
+          "Atención a deportistas amateur"
+        ],
+        "logros": [
+          "Incremento del 50% en la cartera de pacientes",
+          "Implementación de nuevas técnicas de punción seca",
+          "Desarrollo del programa de rehabilitación deportiva"
+        ]
+      }
+    ],
+    "habilidades": [
+      "Terapia manual avanzada",
+      "Punción seca",
+      "Rehabilitación neurológica",
+      "Biomecánica deportiva",
+      "Vendaje neuromuscular",
+      "Gestión de equipos",
+      "Evaluación funcional",
+      "Técnicas de movilización"
+    ],
+    "sectores_experiencia": [
+      "Fisioterapia deportiva",
+      "Rehabilitación neurológica",
+      "Medicina deportiva",
+      "Salud pública",
+      "Clínica privada"
+    ]
+  },
+  "perfil_psicologico": {
+    "rasgos_principales": {
+      "extraversion": {
+        "puntuacion": 7,
+        "ejemplos": [
+          "Mantiene una amplia red de amigos y contactos profesionales",
+          "Disfruta organizando reuniones sociales en casa",
+          "Se adapta fácilmente a nuevos entornos como demuestra su trayectoria profesional"
+        ]
+      },
+      "apertura": {
+        "puntuacion": 8,
+        "ejemplos": [
+          "Constante búsqueda de formación y especialización en su campo",
+          "Viajes frecuentes a distintos destinos culturales",
+          "Disposición a probar nuevas experiencias culinarias y culturales"
+        ]
+      },
+      "responsabilidad": {
+        "puntuacion": 9,
+        "ejemplos": [
+          "Trayectoria académica excepcional con premio extraordinario",
+          "Progresión profesional constante con logros medibles",
+          "Mantiene una rutina estructurada combinando trabajo y vida personal"
+        ]
+      },
+      "amabilidad": {
+        "puntuacion": 8,
+        "ejemplos": [
+          "Dedicación a ayudar a otros en su profesión",
+          "Mantiene relaciones duraderas con amigos de diferentes etapas",
+          "Participación activa en eventos familiares y celebraciones"
+        ]
+      },
+      "estabilidad": {
+        "puntuacion": 7,
+        "ejemplos": [
+          "Manejo efectivo del estrés en situaciones laborales exigentes",
+          "Capacidad para mantener relaciones estables personales y profesionales",
+          "Toma de decisiones meditada y progresiva en su carrera"
+        ]
+      }
+    },
+    "fortalezas": [
+      "Alta capacidad de organización y planificación",
+      "Empatía y habilidades interpersonales",
+      "Compromiso con el desarrollo profesional continuo",
+      "Resiliencia ante los desafíos",
+      "Capacidad de liderazgo"
+    ],
+    "areas_mejora": [
+      "Tendencia al perfeccionismo excesivo",
+      "Dificultad para desconectar del trabajo",
+      "Ocasional sobrecarga de responsabilidades",
+      "Impaciencia ante procesos lentos",
+      "Tendencia a postergar el autocuidado"
+    ],
+    "estilo_comunicacion": {
+      "descripcion": "Comunicación asertiva y profesional, con un toque cercano y empático. Utiliza lenguaje técnico cuando es necesario pero sabe adaptarlo al interlocutor.",
+      "muletillas": [
+        "En realidad...",
+        "Desde mi punto de vista profesional...",
+        "Lo que quiero decir es...",
+        "¿Sabes a qué me refiero?",
+        "Básicamente..."
+      ]
+    },
+    "valores": [
+      "Excelencia profesional",
+      "Aprendizaje continuo",
+      "Equilibrio vida-trabajo",
+      "Compromiso con el bienestar de otros",
+      "Integridad"
+    ],
+    "formas_de_actuar": [
+      "Planifica detalladamente su semana laboral",
+      "Mantiene un diario de desarrollo profesional",
+      "Practica deporte regularmente como forma de autocuidado",
+      "Dedica tiempo a mentorizar a colegas más jóvenes",
+      "Organiza cenas mensuales con amigos cercanos",
+      "Prioriza la comunicación regular con su familia",
+      "Busca activamente feedback de sus pacientes",
+      "Participa en conferencias y seminarios de su campo",
+      "Mantiene rutinas matutinas estrictas",
+      "Dedica tiempo a actividades culturales los fines de semana"
+    ],
+    "iq": 128,
+    "frase_motivacional": "El éxito no es el final, el fracaso no es fatal: es el coraje para continuar lo que cuenta"
+  },
+  "perfil_pareja": {
+    "nombre_apellidos": "Carlos Ruiz Fernández",
+    "edad": 36,
+    "donde_se_conocieron": "En un grupo de senderismo en la Sierra de Guadarrama",
+    "estudios": "Ingeniería Industrial por la Universidad Politécnica de Madrid",
+    "trabajo_actual": "Project Manager en una empresa de energías renovables",
+    "conduce": true,
+    "coche": {
+      "tiene": true,
+      "marca": "Volvo XC40"
+    },
+    "moto": {
+      "tiene": false,
+      "marca": ""
+    },
+    "hijos": [
+      {
+        "nombre": "Daniel",
+        "edad": 4,
+        "donde_estudia": "Escuela Infantil Los Girasoles"
+      }
+    ],
+    "manias": [
+      "Organizar el armario por colores",
+      "Revisar tres veces que ha cerrado la puerta",
+      "Tomar el café siempre en la misma taza"
+    ],
+    "cosas_que_gustan": [
+      "Su dedicación a la familia",
+      "Su pasión por el deporte y la vida sana",
+      "Su capacidad de escucha"
+    ],
+    "cosas_que_detesta": [
+      "Que deje la ropa sucia fuera del cesto",
+      "Su obsesión por el trabajo",
+      "Que sea demasiado perfeccionista"
+    ]
+  },
+  "otros_datos": {
+    "mascota": {
+      "tiene": true,
+      "raza": "Gato Siamés",
+      "nombre": "Luna",
+      "edad": 3
+    },
+    "conduccion": {
+      "coche": {
+        "conduce": true,
+        "marca": "Volkswagen",
+        "modelo": "Golf",
+        "anos": 5,
+        "edad_carnet": 18
+      },
+      "moto": {
+        "conduce": false,
+        "marca": "",
+        "anos": 0,
+        "cilindrada": "",
+        "ano_carnet": 0
+      }
+    },
+    "ultima_lesion": "Esguince de tobillo hace 6 meses practicando running",
+    "hobbies": [
+      {
+        "nombre": "Running",
+        "descripcion": "Practica running 3 veces por semana, participa en carreras populares de 10km"
+      },
+      {
+        "nombre": "Fotografía",
+        "descripcion": "Aficionada a la fotografía de paisajes urbanos, especialmente arquitectura"
+      },
+      {
+        "nombre": "Jardinería",
+        "descripcion": "Mantiene un pequeño huerto urbano en su terraza con hierbas aromáticas y hortalizas"
+      }
+    ],
+    "color_favorito": "Azul marino",
+    "estilo_vestimenta": "Casual chic",
+    "prenda_favorita": "Blazer negro",
+    "talla_zapatos": "38",
+    "talla_ropa": "M"
+  },
+  "foto_perfil": null,
+  "perfil_social": {
+    "viajes": {
+      "viajes_espana": [
+        {
+          "lugar": "San Sebastián",
+          "fecha": "15 agosto 2023",
+          "duracion": "4 días",
+          "motivo": "Escapada gastronómica",
+          "acompanantes": "Dos amigas del gimnasio",
+          "anecdotas": [
+            {
+              "anecdota": "Mientras disfrutábamos de un pintxo de tortilla en el Bar Nestor, famoso por su tortilla, nos enteramos de que solo hacen dos tortillas al día. Llegamos justo a tiempo para conseguir el último trozo del día, ¡fue una carrera contra reloj que añadió emoción inesperada a nuestro viaje gastronómico!"
+            },
+            {
+              "anecdota": "En nuestra búsqueda de la mejor sidra, acabamos en una sidrería tradicional en las afueras de San Sebastián, donde accidentalmente iniciamos una competencia de quién podía escanciar la sidra desde más alto sin derramarla. Nuestros torpes intentos hicieron reír a los locales, que terminaron dándonos una lección improvisada."
+            },
+            {
+              "anecdota": "Decidimos subir al Monte Igueldo al atardecer para disfrutar de las vistas de San Sebastián. Al llegar a la cima, nos dimos cuenta de que habíamos tomado el camino largo por error, pero la vista panorámica de la ciudad bañada por el atardecer hizo que ese 'error' fuera uno de los momentos más memorables del viaje."
+            }
+          ]
+        },
+        {
+          "lugar": "Granada",
+          "fecha": "12 abril 2023",
+          "duracion": "3 días",
+          "motivo": "Turismo cultural",
+          "acompanantes": "Pareja",
+          "anecdotas": [
+            {
+              "anecdota": "Mientras explorábamos el Albaicín, decidimos seguir a un gato callejero esperando descubrir algún rincón secreto. Para nuestra sorpresa, nos llevó hasta un pequeño patio escondido donde un anciano tocaba flamenco en su guitarra, ofreciéndonos una experiencia única e inesperadamente íntima de la cultura local."
+            },
+            {
+              "anecdota": "En nuestra visita a la Alhambra, nos perdimos en el Laberinto de los Jardines del Generalife. Entre risas y vueltas, terminamos encontrándonos con una pareja que también estaba perdida. Juntos, compartimos historias y risas hasta que finalmente encontramos la salida, creando una inesperada amistad."
+            },
+            {
+              "anecdota": "Durante una cena en uno de los restaurantes de Plaza Nueva, pedí sin saber una 'ración' de jamón ibérico, esperando un plato moderado. Para mi sorpresa y deleite, me presentaron una montaña de jamón que compartimos entre risas con la mesa vecina, aprendiendo de paso la diferencia entre 'tapa', 'media ración' y 'ración' en la gastronomía española."
+            }
+          ]
+        },
+        {
+          "lugar": "Formentera",
+          "fecha": "1 julio 2023",
+          "duracion": "5 días",
+          "motivo": "Vacaciones de playa",
+          "acompanantes": "Grupo de amigos",
+          "anecdotas": [
+            {
+              "anecdota": "Alquilaron una bicicleta para explorar Formentera, pero en medio del camino se encontraron con un grupo de cabras que bloqueaban el sendero. Después de un divertido intento de comunicarse con ellas, tuvieron que esperar a que las cabras decidieran moverse por su cuenta. Aquella 'conversación' con las cabras se convirtió en el tema recurrente de risas durante el viaje."
+            },
+            {
+              "anecdota": "Mientras disfrutaban de un día de playa en Ses Illetes, uno de los amigos se lanzó al agua sin recordar que llevaba las llaves del alquiler en el bolsillo. La búsqueda de las llaves en el agua cristalina se convirtió en una misión de buceo de emergencia que, afortunadamente, terminó con éxito y muchas risas."
+            },
+            {
+              "anecdota": "Decidieron probar la gastronomía local comiendo paella en un restaurante recomendado, pero confundieron el picante 'guindilla' con un pimiento regular. La reacción inesperada al picante provocó una serie de carreras hacia el mar para calmar el ardor, lo que se convirtió en un espectáculo divertido para los demás comensales y una historia inolvidable para el grupo."
+            }
+          ]
+        },
+        {
+          "lugar": "Sierra Nevada",
+          "fecha": "20 enero 2023",
+          "duracion": "4 días",
+          "motivo": "Viaje de esquí",
+          "acompanantes": "Club deportivo",
+          "anecdotas": [
+            {
+              "anecdota": "Durante nuestro segundo día esquiando en Sierra Nevada, me confié demasiado bajando una pista azul y terminé estrellándome contra un muñeco de nieve gigante que alguien había construido cerca de la pista. No solo quedé cubierto de nieve de cabeza a pies, sino que también mi caída se convirtió en el tema de conversación del día entre el club deportivo."
+            },
+            {
+              "anecdota": "Mientras explorábamos el pueblo después de un día de esquí, accidentalmente entramos a un restaurante pensando que era el que habíamos reservado. No nos dimos cuenta del error hasta que el camarero nos trajo un plato de jamón ibérico como cortesía de la casa, algo que no se ofrecía en el lugar que habíamos elegido. Decidimos quedarnos, y resultó ser una de las mejores cenas que tuvimos."
+            },
+            {
+              "anecdota": "En nuestro último día, decidimos tomar una clase de snowboard para cambiar un poco la rutina. Yo nunca había practicado snowboarding antes, y en mi primer intento de bajar una pendiente suave, terminé deslizándome de espaldas durante casi medio minuto. Aunque fue un poco vergonzoso, me gané el apodo de 'el surfista de nieve' por el resto del viaje."
+            }
+          ]
+        },
+        {
+          "lugar": "Santiago de Compostela",
+          "fecha": "5 mayo 2023",
+          "duracion": "3 días",
+          "motivo": "Fin de semana largo",
+          "acompanantes": "Sola",
+          "anecdotas": [
+            {
+              "anecdota": "Perdida en los callejones empedrados de Santiago, intentando encontrar el famoso Mercado de Abastos, acabé siendo guiada por un amable anciano que, además de mostrarme el camino, me contó historias de la ciudad que no aparecen en ninguna guía turística."
+            },
+            {
+              "anecdota": "Al visitar la Catedral de Santiago, coincidí con el inicio de la Misa del Peregrino. Decidí quedarme y vivir la experiencia completa; el momento del botafumeiro fue tan impresionante que me dejó con una sensación de asombro y paz interior difícil de olvidar."
+            },
+            {
+              "anecdota": "Intentando probar todas las delicias gallegas posibles, acepté el desafío de un restaurante local de comer una tapa de pulpo 'a feira' muy picante. La cara que puse al sentir el verdadero picor fue tan cómica que terminé en la foto del día del restaurante, colgada con orgullo en su entrada."
+            }
+          ]
+        }
+      ],
+      "viajes_internacional": [
+        {
+          "lugar": "París",
+          "pais": "Francia",
+          "fecha": "23 junio 2023",
+          "duracion": "6 días",
+          "motivo": "Vacaciones de verano",
+          "acompanantes": "Pareja",
+          "anecdotas": [
+            {
+              "anecdota": "Mientras intentábamos hacernos un selfie con la Torre Eiffel de fondo, un grupo de turistas se acercó para ayudarnos y terminaron invitándonos a un picnic improvisado justo al pie de la torre. Compartimos risas, queso y vino bajo las luces de París, convirtiendo un simple momento en un recuerdo inolvidable."
+            },
+            {
+              "anecdota": "En nuestro tercer día, decidimos explorar Montmartre y nos perdimos en sus encantadoras callecitas. Sin querer, dimos con una pequeña panadería escondida que tenía los mejores croissants que hemos probado. El panadero, al ver nuestro entusiasmo, nos regaló un par de dulces extras y nos enseñó algunas palabras en francés."
+            },
+            {
+              "anecdota": "Al visitar el Museo del Louvre, estábamos tan absortos admirando la Mona Lisa que no nos dimos cuenta de la hora de cierre. Nos encontramos siendo gentilmente escoltados fuera por un guardia, quien compartió con nosotros historias sobre las travesuras nocturnas de los gatos del Louvre. Terminó siendo una despedida única de uno de los museos más famosos del mundo."
+            }
+          ]
+        },
+        {
+          "lugar": "Copenhague",
+          "pais": "Dinamarca",
+          "fecha": "10 octubre 2023",
+          "duracion": "4 días",
+          "motivo": "Congreso de trabajo",
+          "acompanantes": "Compañeros de trabajo",
+          "anecdotas": [
+            {
+              "anecdota": "Mientras paseábamos por Nyhavn, decidimos tomar una foto grupal con los coloridos edificios de fondo. Justo cuando íbamos a tomar la foto, un grupo de ciclistas pasó detrás de nosotros, riendo y saludando, apareciendo todos en nuestra foto. Fue un recordatorio perfecto de la amigable cultura ciclista de Copenhague."
+            },
+            {
+              "anecdota": "En nuestro último día, intentamos probar el famoso Smørrebrød en un restaurante local. Sin embargo, confundí los nombres y accidentalmente pedí una versión con arenque, un ingrediente que nunca había probado. Resultó ser delicioso, convirtiéndose en mi comida favorita del viaje y una historia divertida sobre cómo mis papilas gustativas se aventuraron más allá de lo esperado en Dinamarca."
+            },
+            {
+              "anecdota": "Durante una visita al Parque de Tivoli, decidimos subirnos a una de las montañas rusas más antiguas. Justo en el pico más alto, el carro se detuvo momentáneamente, brindándonos una vista inesperada pero impresionante de la ciudad iluminada. Fue un momento de temor y maravilla que ninguno de nosotros olvidará, una mezcla de adrenalina y belleza icónica de Copenhague."
+            }
+          ]
+        }
+      ]
+    },
+    "social": {
+      "estilo_alimentacion": "Flexitariana con tendencia a dieta mediterránea",
+      "platos_favoritos": [
+        {
+          "nombre": "Bowl de quinoa y verduras asadas",
+          "receta": "Quinoa cocida, calabacín, berenjena y pimientos asados, garbanzos especiados, aguacate, semillas de calabaza y aliño de tahini con limón",
+          "ocasion": "Almuerzos entre semana post-entrenamiento"
+        },
+        {
+          "nombre": "Paella de mariscos",
+          "receta": "Arroz bomba, mejillones, gambas, calamares, pimiento rojo, guisantes, azafrán, caldo de pescado y sofrito tradicional",
+          "ocasion": "Comidas familiares de domingo"
+        }
+      ],
+      "ultimas_reuniones": [
+        {
+          "fecha": "15/10/2023",
+          "menu": "Tabla de quesos y embutidos, ensalada de burrata, lasaña vegetariana, tiramisú casero",
+          "invitados": [
+            "Carmen López",
+            "David Torres",
+            "Ana Ruiz",
+            "Pablo García"
+          ],
+          "musica": [
+            "Jazz contemporáneo",
+            "Bossa Nova"
+          ]
+        },
+        {
+          "fecha": "28/09/2023",
+          "menu": "Gazpacho andaluz, brochetas de pollo al limón, ensalada de quinoa, tarta de zanahoria",
+          "invitados": [
+            "María Pérez",
+            "Jorge Sanz",
+            "Laura Costa"
+          ],
+          "musica": [
+            "Pop español",
+            "Indie rock"
+          ]
+        }
+      ]
+    }
+  }
+}
