@@ -1,0 +1,17 @@
+# APIs y Clientes
+anthropic>=0.8.0         # Para interactuar con Claude AI
+openai>=1.0.0           # Para interactuar con OpenAI API
+wikipedia-api>=0.6.0    # Para interactuar con Wikipedia
+python-dotenv>=1.0.0    # Para manejar variables de entorno
+
+# Procesamiento de Imágenes
+Pillow>=10.0.0          # Para manipulación de imágenes (PIL)
+
+# Generación de HTML
+Jinja2>=3.1.0           # Motor de plantillas para HTML
+
+# Utilidades HTTP
+requests>=2.31.0        # Para realizar solicitudes HTTP
+
+# Tipos de Python
+typing>=3.7.4           # Para tipado estático (incluido en Python 3.7+) 
